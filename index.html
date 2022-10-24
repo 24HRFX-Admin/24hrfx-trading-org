@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24HRFX Trading</title>
+
+    <link rel="stylesheet" href="CSS/main.css">
+</head>
+<body>
+    <header>
+        <div class="home_page">
+            <div class="menu_log">
+                <div class="logo">
+                    <img src="Images/logo.png" alt="logo">
+                </div>
+                <div class="menu">
+                    <img class="icon_menu" src="Images/icon-menu.svg" alt="logo">
+                    <img class="icon_close_menu disappear" src="Images/icon-close-menu.svg" alt="logo">
+                </div>
+            </div>
+            <nav class="nav_1">
+                <div class="under_nav">
+                    <a href="./about2.html">About</a>
+                </div>
+                <div class="under_nav">
+                    <a href="./faq2.html">FAQ</a>
+                </div>
+                <div class="hold under_nav">
+                    <button class="btn sign_in">Log in / Register</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1 class="changing hidden switching">
+            <span>User</span>
+            <span class="selected">Login</span>
+        </h1>
+
+        <div class="container hidden wrapper">
+            <div class="options">
+                <div id="login" class="active option">Login</div>
+                <div id="register" class="option">Register</div>
+            </div>
+
+
+            <div class="info_a">
+                <form>
+                    <div>
+                        <input id="username" type="text" placeholder="Username">
+                    </div>
+                    <div>
+                        <input id="user_id" type="text" placeholder="User Id">
+                    </div>
+                    <div class="lock">
+                        <input id="pass" class="inputs" type="password" placeholder="Password">
+
+                        <div class="show">
+                            <img class="reveal" src="Images/show.svg" alt="show">
+                        </div>
+                    </div>
+                    <div>
+                        <a href="#" class="forgot">
+                            Forgot Password?
+                        </a>
+                    </div>
+                </form>
+
+                <button type="button" class="btn" id="btn_a">
+                   Log in
+                </button>
+            </div>
+
+            <div class="info_b hidden">
+                <form onsubmit="return false">
+                    <div>
+                        <input id="mail" type="email" placeholder="Email Address">
+                        <div id="validity"></div>
+                    </div>
+                    <div>
+                        <input id="user" type="text" placeholder="Set Username">
+                    </div>
+                    <div class="lock">
+                        <input id="password" class="inputs" type="password" placeholder="Password">
+
+                        <div class="show">
+                            <img class="reveal" src="Images/show.svg" alt="show">
+                        </div>
+                    </div>
+                    <div class="lock">
+                        <input id="confirm" class="inputs" type="password" placeholder="Confirm password">
+
+                        <div class="show">
+                            <img class="reveal" src="Images/show.svg" alt="show">
+                        </div>
+                    </div>
+
+                    <div class="confirmation"></div>          
+                </form>
+
+                <button type="button" class="btn" id="btn_b">Register</button>
+
+                
+            </div>
+
+            <div class="info_c thank_you">
+                <h2>Thank you!</h2>
+                <p>Your acccount has been successfully created, but it's <span style = "color:red">Inactive</span></p>
+                <p>Click the <span style="color: cyan">"Next"</span>button to activate your account.</p>
+                <p>We appreciate you taking the time to register with us. If you ever need more support, don’t hesitate to get in touch!
+                </p>
+
+                <div class="decide">
+                    <button class="btn next">
+                        Next
+                    </button>
+                    <br>
+                    <button class="btn home_b">
+                        Back to Login
+                    </button>
+                </div>
+            </div>
+
+            <div class="info_d">
+                <p>Forgot your password? Please enter your email address. You will receive a link to create a new password via email.</p>
+    
+                <div class="change">
+                    <input type="Email" placeholder="Enter Email Address">
+                </div>
+
+                <button class="btn res">Reset</button>
+            </div>
+        </div>
+
+        <div class="profile hidden">
+            <div class="person">
+                <img src="Images/person-svgrepo-com.svg" alt="person">
+            </div>
+            <div class="name" id="name_stated"></div>
+            <div class="mail_stated" id="mail_stated"></div>
+            <div class="status">STATUS: <span>INACTIVE</span></div>
+
+            <div class="payment">
+                <p>Buy your first package to activate your account!</p>
+       
+                <p>Click the button below, to start your payment.</p>
+                <div>
+                    <button class="pay btn">Buy Package</button>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="payment_methods hidden">
+                    <div class="info_e hidden">
+                        <div class="instructions">
+                            <h1 class="h_pack">Investment Platform</h1>
+
+                            <div class="grid">
+                                <div class="deal deal_a">
+                                    <div>Deposit: <span class="investment">$30</span></div>
+                                    <div>Income: <span>$120</span></div>
+                                </div>
+                                <div class="deal deal_b">
+                                    <div>Deposit: <span class="investment">$40</span></div>
+                                    <div>Income: <span>$160</span></div>
+                                </div>
+                                <div class="deal deal_c">
+                                    <div>Deposit: <span class="investment">$50</span></div>
+                                    <div>Income: <span>$200</span></div>
+                                </div>
+                                <div class="deal deal_d">
+                                    <div>Deposit: <span class="investment">$100</span></div>
+                                    <div>Income: <span>$300</span></div>
+                                </div>
+                                <div class="deal deal_e">
+                                    <div>Deposit: <span class="investment">$150</span></div>
+                                    <div>Income: <span>$400</span></div>
+                                </div>
+                                <div class="deal deal_f">
+                                    <div>Deposit: <span class="investment">$200</span></div>
+                                    <div>Income: <span>$500</span></div>
+                                </div>
+                            </div>
+
+                            <div class="pay_inst hidden">
+                                <h1>Pay via M-Pesa</h1>
+                                <p>
+                                    1. Go to M-PESA in your mobile phone throught Sim Toolkit or the M-pesa App.
+                                </p>
+                                <p>
+                                    2. Select Send Money. Pay to any of the following mobile numbers:
+                                </p>
+                                <p class="phone_nums">
+                                    <span><b>Tanzania:</b></span>
+                                    <span>Ritei Kolol Mollel</span>
+                                    <span>+2557486411027</span>
+                                </p>
+                                <p class="phone_nums">
+                                    <span><b>Tanzania:</b></span>
+                                    <span>Magreth Petro Malahiya</span>
+                                    <span>+255743489103</span>
+                                </p>
+                                <p class="phone_nums">
+                                    <span><b>Kenya:</b></span>
+                                    <span>Wycliffe Indianzi</span>
+                                    <span>+254798741549</span>
+                                </p>    
+                                <p>
+                                    3. Enter the M-pesa confirmation code below:
+                                </p>
+                                <p>
+                                    Buy <span class="sel_inv"></span> worth package.
+                                </p>
+                                <p>
+                                    Or <span><b><a class="another" href="./packages.html">Select another package</a></b></span>
+                                </p>
+                                <div class="sub_info">
+                                    <div>
+                                        <input type="text" placeholder="M-pesa code">
+                                    </div>
+                                    <div>
+                                        <button class="btn next_page next_page_index">
+                                            Submit
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        </div>
+
+        <div class="wait hidden">
+            <p>Your Payment is being processed.Please await verification.
+            </p>
+            <p>You will receive an Email with your <b>User Id,</b> which you will use to Log in.</p>
+            <p>Verification might take a while, please remain patient.</p>
+
+            <div class="button_holder">
+                <button class="btn home_b">
+                    Back to Login
+                </button>
+            </div>
+        </div>
+
+
+        <div class="illustrate illustration">
+            <div class="begin">
+                <h1>
+                    <span>Buy, Sell & Swap in</span>
+                    <span>24HR</span>
+                    <span>FX</span>
+                    <span>Trading Org.</span>
+                </h1>
+                <p>Create an account or log in if you already have one, to have access to our products and services.</p>
+                <div class="start">
+                    <button class="btn get_started">Get Started</button>
+                </div>
+            </div>
+            <div>
+                <img src="Images/banner.png" alt="crypto">
+            </div>
+        </div>
+
+
+        <div class="history">
+            <h1 class="trans_hist">
+                Transaction History
+            </h1>
+
+            <p>Check out our recent activity; recent transactions involving withdrawals and deposits.</p>
+        </div>
+
+        <div class="history_general">
+            <div class="deposits">
+                <div>
+                    <h2>Current Investments</h2>
+                </div>
+                <div class="depo_under">
+                    <div>Florida</div>
+                    <div>$200.00</div>
+                </div>
+                <div class="depo_under">
+                    <div>Omni_2.0</div>
+                    <div>$170.04</div>
+                </div>
+                <div class="depo_under">
+                    <div>Sunaina</div>
+                    <div>$250.80</div>
+                </div>
+                <div class="depo_under">
+                    <div>Debora_20</div>
+                    <div>$650.22</div>
+                </div>
+                <div class="depo_under">
+                    <div>Pac.man</div>
+                    <div>$600.76</div>
+                </div>
+                <div class="depo_under">
+                    <div>Siki03_hida</div>
+                    <div>$550.49</div>
+                </div>
+            </div>
+
+            <div class="withdrawals">
+                <div>
+                    <h2>Previous Withdrawals</h2>
+                </div>
+                <div class="with_under">
+                    <div>Sunaina</div>
+                    <div>$406.00</div>
+                </div>
+                <div class="with_under">
+                    <div>Koke</div>
+                    <div>$610.04</div>
+                </div>
+                <div class="with_under">
+                    <div>Siki03_hida</div>
+                    <div>$700.66</div>
+                </div>
+                <div class="with_under">
+                    <div>Debora_20</div>
+                    <div>$150.22</div>
+                </div>
+                <div class="with_under">
+                    <div>Sunaina</div>
+                    <div>$207.60</div>
+                </div>
+                <div class="with_under">
+                    <div>Pree067_sam</div>
+                    <div>$300.76</div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="script.js"></script>
+    <script src="index.js"></script>
+
+    <script>
+        const deal_a = document.querySelector ('.deal_a');
+        const deal_b = document.querySelector ('.deal_b');
+        const deal_c = document.querySelector ('.deal_c');
+        const deal_d = document.querySelector ('.deal_d');
+        const deal_e = document.querySelector ('.deal_e');
+        const deal_f = document.querySelector ('.deal_f');
+        const grid = document.querySelector ('.grid');
+        const sel_inv = document.querySelector ('.sel_inv');
+
+        const pay_inst = document.querySelector ('.pay_inst');
+        const logo_pack = document.querySelector('.logo_pack');
+        const log_pack = document.querySelector('.logout_pack');
+
+        deal_a.addEventListener ('click', ()=> {
+            pay_inst.classList.remove ('hidden');
+            grid.classList.add ('hidden');
+            sel_inv.innerHTML = "$30";
+        })
+        deal_b.addEventListener ('click', ()=> {
+            pay_inst.classList.remove ('hidden');
+            grid.classList.add ('hidden');
+            sel_inv.innerHTML = "$40";
+        })
+        deal_c.addEventListener ('click', ()=> {
+            pay_inst.classList.remove ('hidden');
+            grid.classList.add ('hidden');
+            sel_inv.innerHTML = "$50";
+        })
+        deal_d.addEventListener ('click', ()=> {
+            pay_inst.classList.remove ('hidden');
+            grid.classList.add ('hidden');
+            sel_inv.innerHTML = "$100";
+        })
+        deal_e.addEventListener ('click', ()=> {
+            pay_inst.classList.remove ('hidden');
+            grid.classList.add ('hidden');
+            sel_inv.innerHTML = "$150";
+        })
+        deal_f.addEventListener ('click', ()=> {
+            pay_inst.classList.remove ('hidden');
+            grid.classList.add ('hidden');
+            sel_inv.innerHTML = "$200";
+        })
+    </script>
+</body>
+</html>

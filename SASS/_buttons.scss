@@ -1,0 +1,61 @@
+.btn {
+    border: none;
+    border-radius: 10px;
+    padding: 10px 10px;
+    font-weight: 600;
+    font-size: 18px;
+    width: 40%;
+    margin-top: 16px;
+}
+.btn:hover {
+    padding: 8px 10px;
+}
+.btn:active {
+    padding: 8px 10px;
+}
+.home {
+    width: 100%;
+}
+.td1, .td2 {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+}
+.tl1, .tl2 {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+.td1:hover, .td2:hover{
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+.tl1:hover, .tl2:hover {
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+}
+.themed {
+    width: 20px;
+    height: 20px;
+}
+.themed_b {
+    width: 18px;
+    height: 18px;
+}
+.res {
+    margin-top: 28px;
+}
+
+.sign_in, .logout {
+    width: 100%;
+    padding: 8px 10px;
+
+    @media (max-width: 2040px) {
+        margin-bottom: 12px; 
+    }
+    @media (max-width: 600px) {
+        margin-bottom: 0; 
+    }
+}

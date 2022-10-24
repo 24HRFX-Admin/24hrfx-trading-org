@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24HRFX Trading</title>
+
+    <link rel="stylesheet" href="CSS/main.css">
+</head>
+<body>
+    <header>
+        <div class="home_page">
+            <div class="menu_log">
+                <div class="logo logo_pack">
+                    <img src="Images/logo.png" alt="logo">
+                </div>
+                <div class="menu">
+                    <img class="icon_menu" src="Images/icon-menu.svg" alt="logo">
+                    <img class="icon_close_menu disappear" src="Images/icon-close-menu.svg" alt="logo">
+                </div>
+            </div>
+            <nav class="nav_2">
+                <div class="under_nav">
+                    <a href="./packages.html">Packages</a>
+                </div>
+                <div class="under_nav">
+                    <a href="./about.html">About</a>
+                </div>
+                <div class="under_nav">
+                    <a href="./faq.html">FAQ</a>
+                </div>
+                <div class="hold under_nav">
+                    <button class="btn logout logout_pack">
+                        Log Out
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main style="padding-top: 0; padding-bottom: 20px">
+        <div class="dropdown">
+            <div class="account">
+                <div class="acc">Account</div>
+                <div class="drop_arrow">
+                    <img src="Images/icon-arrow.svg" alt="arrow">
+                </div>
+            </div>
+            
+            <div class="profile prof_acc user_acc">
+                <h1 class="prof_h">User Profile</h1>
+    
+                <div class="person">
+                    <img src="Images/person-svgrepo-com.svg" alt="person">
+                </div>
+                <div class="name_acc"></div>
+                <div class="mail_acc"></div>
+                <div class="status">STATUS: <span style="color:limegreen">Active</span></div>
+
+                <div class="usr_hist hidden">
+                    <h2 class="table_h">Investment History</h2>
+                    <table>
+                        <tr>
+                            <th>Active Investment</th>
+                            <th>Withdrawable Balance</th>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <button class="btn withdraw" style="background-color: darkcyan">
+                    Withdraw
+                </button>
+            </div>
+        </div>
+
+        <div class="enter_fields hidden">
+            <p>Fill in your full names (as registered with M-pesa services) and your mobile number below:</p>
+            <div class="fields">
+                <input type="text" placeholder="Full Name">
+                <input type="text" placeholder="Mobile Number">
+            </div>
+            <div class="nxt_hold">
+                <button class="btn nxt_msg">
+                    Next
+                </button>
+            </div>
+
+        </div>
+
+        <div class="msg hidden">
+            <p>Your investment plan that you enrolled has ended. You are eligible to receive profit.</p>
+            <p>Kindly Make payment of $45, withdrawal fee.</p>
+
+            <div>
+                <button class="btn pay_fee">
+                    Pay fee
+                </button>
+                <button class="btn exit">
+                    Exit
+                </button>
+            </div>
+        </div>
+        
+        <h2 class="h_pack">Investment Packages</h1>
+        <div class="grid">
+            <div class="deal deal_a">
+                <div>Deposit: <span class="investment">$30</span></div>
+                <div>Income: <span>$120</span></div>
+            </div>
+            <div class="deal deal_b">
+                <div>Deposit: <span class="investment">$40</span></div>
+                <div>Income: <span>$160</span></div>
+            </div>
+            <div class="deal deal_c">
+                <div>Deposit: <span class="investment">$50</span></div>
+                <div>Income: <span>$200</span></div>
+            </div>
+            <div class="deal deal_d">
+                <div>Deposit: <span class="investment">$100</span></div>
+                <div>Income: <span>$300</span></div>
+            </div>
+            <div class="deal deal_e">
+                <div>Deposit: <span class="investment">$150</span></div>
+                <div>Income: <span>$400</span></div>
+            </div>
+            <div class="deal deal_f">
+                <div>Deposit: <span class="investment">$200</span></div>
+                <div>Income: <span>$500</span></div>
+            </div>
+        </div>
+
+        <div class="pay_inst hidden">
+            <h1>Pay via M-Pesa</h1>
+            <p>
+                1. Go to M-PESA in your mobile phone throught Sim Toolkit or the M-pesa App.
+            </p>
+            <p>
+                2. Select Send Money. Pay to any of the following mobile numbers:
+            </p>
+            <p class="phone_nums">
+                <span><b>Tanzania:</b></span>
+                <span>Ritei Kolol Mollel</span>
+                <span>+2557486411027</span>
+            </p>
+            <p class="phone_nums">
+                <span><b>Tanzania:</b></span>
+                <span>Magreth Petro Malahiya</span>
+                <span>+255743489103</span>
+            </p>
+            <p class="phone_nums">
+                <span><b>Kenya:</b></span>
+                <span>Wycliffe Indianzi</span>
+                <span>+254798741549</span>
+            </p>    
+            <p>
+                3. Enter the M-pesa confirmation code below:
+            </p>
+            <p>
+                Buy <span class="sel_inv"></span> worth package.
+            </p>
+            <p>
+                Or <span><b><a class="another" href="./packages.html">Select another package</a></b></span>
+            </p>
+            <div class="sub_info">
+                <div>
+                    <input type="text" placeholder="M-pesa code">
+                </div>
+                <div>
+                    <button class="btn next_page next_page_a">
+                        Submit
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="pay_inst_b hidden">
+            <h1 style="color: darkcyan">Pay via M-Pesa</h1>
+            <p>
+                1. Go to M-PESA in your mobile phone throught Sim Toolkit or the M-pesa App.
+            </p>
+            <p>
+                2. Select Send Money. Pay to any of the following mobile numbers:
+            </p>
+            <p class="phone_nums">
+                <span><b>Tanzania:</b></span>
+                <span>Ritei Kolol Mollel</span>
+                <span>+2557486411027</span>
+            </p>
+            <p class="phone_nums">
+                <span><b>Tanzania:</b></span>
+                <span>Magreth Petro Malahiya</span>
+                <span>+255743489103</span>
+            </p>
+            <p class="phone_nums">
+                <span><b>Kenya:</b></span>
+                <span>Wycliffe Indianzi</span>
+                <span>+254798741549</span>
+            </p>    
+            <p>
+                3. Enter the M-pesa confirmation code below:
+            </p>
+            <div class="sub_info">
+                <div>
+                    <input type="text" placeholder="M-pesa code">
+                </div>
+                <div>
+                    <button class="btn next_page nxt_pack">
+                        Submit
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="foot_a">
+            <div class="logo logo_foot">
+                <img src="Images/logo.png" alt="logo">
+            </div>
+            <div class="nav_foot">
+                <div>
+                    <a  href="./packages.html">Packages</a>
+                </div>
+                <div>
+                    <a href="./about.html">About</a>
+                </div>
+                <div>
+                    <a href="faq.html">FAQ</a>
+                </div>
+                <!--<div>
+                    <a href="./account.html">Account</a>
+                </div>-->
+            </div>
+        </div>
+
+        <div class="foot_b">
+            <div class="media_a">
+                <a href="http://www.instagram.com/24hrfxtrading" target="blank">
+                    <img src="Images/icon-instagram.svg" alt="ig">
+                </a>
+            </div>
+            <div class="media_b">
+                <a href="#">
+                    <img src="Images/icon-facebook.svg" alt="fb">
+                </a>
+            </div>
+            <div class="media_c">
+                <a href="https://t.me/T24HRFXTRADINGORG" target="blank">
+                    <img src="Images/telegram-logo-svgrepo-com.svg" alt="tel">
+                </a>
+            </div>
+            <div class="media_d">
+                <a href="https://bit.ly/3Mky8TS" target="blank">
+                    <img src="Images/whatsapp-svgrepo-com.svg" alt="wa">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+        const name_acc = document.querySelector ('.name_acc');
+        const mail_acc = document.querySelector ('.mail_acc');
+
+        var storedName_pack = localStorage.getItem('name');
+       // var storedPw_pack = localStorage.getItem('pw');
+        var storedMail_pack = localStorage.getItem('email');
+
+        name_acc.innerHTML = storedName_pack;
+        mail_acc.innerHTML = storedMail_pack;
+
+        const account = document.querySelectorAll('.account');
+
+        for (i=0; i < account.length; i++) {
+            account[i].addEventListener('click',change);
+            function change() {
+                this.classList.toggle ('active');
+            };
+        }
+
+        const deal_a = document.querySelector ('.deal_a');
+        const deal_b = document.querySelector ('.deal_b');
+        const deal_c = document.querySelector ('.deal_c');
+        const deal_d = document.querySelector ('.deal_d');
+        const deal_e = document.querySelector ('.deal_e');
+        const deal_f = document.querySelector ('.deal_f');
+        const grid = document.querySelector ('.grid');
+        const sel_inv = document.querySelector ('.sel_inv');
+
+        const pay_inst = document.querySelector ('.pay_inst');
+        const logo_pack = document.querySelector('.logo_pack');
+        const log_pack = document.querySelector('.logout_pack');
+
+        deal_a.addEventListener ('click', ()=> {
+            pay_inst.classList.remove ('hidden');
+            grid.classList.add ('hidden');
+            sel_inv.innerHTML = "$30";
+        })
+        deal_b.addEventListener ('click', ()=> {
+            pay_inst.classList.remove ('hidden');
+            grid.classList.add ('hidden');
+            sel_inv.innerHTML = "$40";
+        })
+        deal_c.addEventListener ('click', ()=> {
+            pay_inst.classList.remove ('hidden');
+            grid.classList.add ('hidden');
+            sel_inv.innerHTML = "$50";
+        })
+        deal_d.addEventListener ('click', ()=> {
+            pay_inst.classList.remove ('hidden');
+            grid.classList.add ('hidden');
+            sel_inv.innerHTML = "$100";
+        })
+        deal_e.addEventListener ('click', ()=> {
+            pay_inst.classList.remove ('hidden');
+            grid.classList.add ('hidden');
+            sel_inv.innerHTML = "$150";
+        })
+        deal_f.addEventListener ('click', ()=> {
+            pay_inst.classList.remove ('hidden');
+            grid.classList.add ('hidden');
+            sel_inv.innerHTML = "$200";
+        })
+
+
+
+        const nxt_p = document.querySelector ('.next_page_a');
+
+        nxt_p.addEventListener ('click', ()=> {
+            alert("Your Payment is being processed. Please await a responce from 24HRFX TRADING ORG.");
+            window.location = "./packages.html";
+        })
+
+
+
+        logo_pack.addEventListener ('click', ()=> {
+            window.location = "./page1.html";
+        })
+
+        log_pack.addEventListener ('click', ()=> {
+            window.location = "./index.html";
+        })
+    </script>
+</body>
+</html>
