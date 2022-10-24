@@ -65,6 +65,7 @@ const inst_b = document.querySelector ('.pay_inst_b');
 const drop_down = document.querySelector ('.dropdown');
 const nxt_package = document.querySelector ('.nxt_pack');
 const enter_fields = document.querySelector ('.enter_fields');
+const ins_p = document.querySelector ('.p_ins');
 
 
 withdraw.addEventListener ('click', ()=> {
@@ -74,6 +75,7 @@ withdraw.addEventListener ('click', ()=> {
     h_pack.classList.add ('hidden');
     grid_pack.classList.add ('hidden');
     inst_p.classList.add ('hidden');
+    ins_p.classList.add ('hidden');
     drop_down.classList.add ('hidden');
     enter_fields.classList.remove('hidden');
 
@@ -98,4 +100,5 @@ withdraw.addEventListener ('click', ()=> {
         })
     })
 })
+
 

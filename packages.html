@@ -72,6 +72,8 @@
                     </table>
                 </div>
 
+                <p style="color: crimson; font-size: 18px">Withdrawal requests are processed only after 24 hours of maturity!</p>
+
                 <button class="btn withdraw" style="background-color: darkcyan">
                     Withdraw
                 </button>
@@ -107,6 +109,7 @@
         </div>
         
         <h2 class="h_pack">Investment Packages</h1>
+            <p class="p_ins" style="font-size: 18px;">Select any of the packages below to invest. You will get payment instructions after clicking on your preferred package.</p>
         <div class="grid">
             <div class="deal deal_a">
                 <div>Deposit: <span class="investment">$30</span></div>
@@ -148,11 +151,6 @@
                 <span>+2557486411027</span>
             </p>
             <p class="phone_nums">
-                <span><b>Tanzania:</b></span>
-                <span>Magreth Petro Malahiya</span>
-                <span>+255743489103</span>
-            </p>
-            <p class="phone_nums">
                 <span><b>Kenya:</b></span>
                 <span>Wycliffe Indianzi</span>
                 <span>+254798741549</span>
@@ -190,11 +188,6 @@
                 <span><b>Tanzania:</b></span>
                 <span>Ritei Kolol Mollel</span>
                 <span>+2557486411027</span>
-            </p>
-            <p class="phone_nums">
-                <span><b>Tanzania:</b></span>
-                <span>Magreth Petro Malahiya</span>
-                <span>+255743489103</span>
             </p>
             <p class="phone_nums">
                 <span><b>Kenya:</b></span>
@@ -293,6 +286,7 @@
         const deal_f = document.querySelector ('.deal_f');
         const grid = document.querySelector ('.grid');
         const sel_inv = document.querySelector ('.sel_inv');
+        const p_ins = document.querySelector ('.p_ins');
 
         const pay_inst = document.querySelector ('.pay_inst');
         const logo_pack = document.querySelector('.logo_pack');
@@ -301,31 +295,37 @@
         deal_a.addEventListener ('click', ()=> {
             pay_inst.classList.remove ('hidden');
             grid.classList.add ('hidden');
+            p_ins.classList.add ('hidden');
             sel_inv.innerHTML = "$30";
         })
         deal_b.addEventListener ('click', ()=> {
             pay_inst.classList.remove ('hidden');
             grid.classList.add ('hidden');
+            p_ins.classList.add ('hidden');
             sel_inv.innerHTML = "$40";
         })
         deal_c.addEventListener ('click', ()=> {
             pay_inst.classList.remove ('hidden');
             grid.classList.add ('hidden');
+            p_ins.classList.add ('hidden');
             sel_inv.innerHTML = "$50";
         })
         deal_d.addEventListener ('click', ()=> {
             pay_inst.classList.remove ('hidden');
             grid.classList.add ('hidden');
+            p_ins.classList.add ('hidden');
             sel_inv.innerHTML = "$100";
         })
         deal_e.addEventListener ('click', ()=> {
             pay_inst.classList.remove ('hidden');
             grid.classList.add ('hidden');
+            p_ins.classList.add ('hidden');
             sel_inv.innerHTML = "$150";
         })
         deal_f.addEventListener ('click', ()=> {
             pay_inst.classList.remove ('hidden');
             grid.classList.add ('hidden');
+            p_ins.classList.add ('hidden');
             sel_inv.innerHTML = "$200";
         })
 
