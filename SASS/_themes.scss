@@ -37,6 +37,9 @@ input {
     color: var(--btn-active);
     border: 2px solid var(--btn);
 }
+.btn_r {
+    background-color: darkcyan;
+}
 .sign_in {
     background-color: var(--btn-hover);
     color: var(--btn);
@@ -267,7 +270,7 @@ footer {
 }
 
 .deal:hover {
-    background-color: hsl(214, 38%, 36%);
+    background-color: hsl(234, 38%, 26%);
 }
 
 .another {
@@ -313,4 +316,17 @@ table {
 }
 .msg {
     background-color: var(--container-bg);
+}
+.account {
+    background-color:hsl(254, 38%, 16%);
+    padding: 8px;
+    border-radius: 12px;
+
+    &:hover {
+        background-color: hsl(244, 38%, 26%);
+    }
+}
+.reg_r:hover {
+    color: cyan;
+    cursor: pointer;
 }

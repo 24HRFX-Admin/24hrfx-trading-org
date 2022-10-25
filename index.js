@@ -37,6 +37,9 @@ const registration = document.querySelector('.info_b');
 const login_opt = document.querySelector('#login');
 const reg_opt = document.querySelector('#register');
 const selected = document.querySelector('.selected');
+const btn_r = document.querySelector('#btn_r');
+const s_r = document.querySelector('#s_r');
+
 
 login_opt.addEventListener ('click', ()=> {
     login_opt.classList.add ("active");
@@ -58,6 +61,25 @@ reg_opt.addEventListener ('click', ()=> {
     selected.innerHTML = "Registration";
 })
 
+btn_r.addEventListener ('click', ()=> {
+    login_opt.classList.remove ("active");
+    reg_opt.classList.add ("active");
+
+    log.classList.add("hidden");
+    registration.classList.remove ("hidden");
+
+    selected.innerHTML = "Registration";
+})
+
+s_r.addEventListener ('click', ()=> {
+    login_opt.classList.remove ("active");
+    reg_opt.classList.add ("active");
+
+    log.classList.add("hidden");
+    registration.classList.remove ("hidden");
+
+    selected.innerHTML = "Registration";
+})
 
 
 // EMAIL VALIDITY CHECK & PASSWORD CONFIRMATION
