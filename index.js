@@ -22,7 +22,7 @@ sign_in.addEventListener ('click', ()=> {
 })
 
 start_reg.addEventListener ('click', ()=> {
-    changings.classList.remove ("hidden");
+        changings.classList.remove ("hidden");
         illustrates.classList.add ("hidden");
         contains.classList.remove ("hidden");
         histo.classList.add ("hidden");
@@ -104,6 +104,29 @@ function submition() {
         confirmation.style = "display: flex; justify-content: space-between; align-items: center; font-size: 14px; background-color: hsl(0, 94%, 66%); color: white; padding: 8px; width: 86%";
     }
 
+    const f_name = document.querySelector ('#f_name')
+    const l_name = document.querySelector ('#l_name')
+    const err_msg = document.querySelector ('#err_msg')
+    const err_msg_b = document.querySelector ('#err_msg_b')
+    const usr = document.querySelector ('#user')
+
+
+    if (f_name.value == "" || l_name.value == "") {
+        err_msg.innerHTML ="Fill in both names <span><img src='Images/icon-error.svg' alt='error'></span>";
+        err_msg.style = "display: flex; justify-content: space-between; align-items: center; font-size: 14px; background-color: hsl(0, 94%, 66%); color: white; padding: 8px; width: 86%";
+    }
+    else {
+        err_msg.innerHTML = "";
+    }
+
+    if (usr.value == "") {
+        err_msg_b.innerHTML ="Set preferred username <span><img src='Images/icon-error.svg' alt='error'></span>";
+        err_msg_b.style = "display: flex; justify-content: space-between; align-items: center; font-size: 14px; background-color: hsl(0, 94%, 66%); color: white; padding: 8px; width: 86%";
+    }
+    else {
+        err_msg_b.innerHTML = "";
+    }
+
     //Display Thank you card
 
     let thanks = document.querySelector('.info_c');
@@ -111,7 +134,7 @@ function submition() {
     const email_ad = document.querySelector ('#mail').value;
 
 
-    if (email.match(pattern) && password === confirm) {
+    if (email.match(pattern) && password === confirm && f_name.value !== "" && l_name.value !== "" && usr.value !== "") {
 
         localStorage.setItem('name', userName);
         localStorage.setItem('pw', password);

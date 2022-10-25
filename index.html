@@ -75,7 +75,16 @@
             </div>
 
             <div class="info_b hidden">
-                <form onsubmit="return false">
+                <form>
+                    <div>
+                        <input type="text" placeholder="First Name" id="f_name">
+                    </div>
+                    <div>
+                        <input type="text" placeholder="Last Name" id="l_name">
+                    </div>
+
+                    <div id="err_msg"></div>
+
                     <div>
                         <input id="mail" type="email" placeholder="Email Address">
                         <div id="validity"></div>
@@ -83,6 +92,9 @@
                     <div>
                         <input id="user" type="text" placeholder="Set Username">
                     </div>
+
+                    <div id="err_msg_b"></div>
+
                     <div class="lock">
                         <input id="password" class="inputs" type="password" placeholder="Password">
 
@@ -90,6 +102,7 @@
                             <img class="reveal" src="Images/show.svg" alt="show">
                         </div>
                     </div>
+                    
                     <div class="lock">
                         <input id="confirm" class="inputs" type="password" placeholder="Confirm password">
 
