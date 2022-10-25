@@ -159,6 +159,8 @@
                         <div class="instructions">
                             <h1 class="h_pack">Investment Platform</h1>
 
+                            <p class="p_ins" style="font-size: 18px;">Select any of the packages below as your first time investment. You will get payment instructions after clicking on your preferred package.</p>
+
                             <div class="grid">
                                 <div class="deal deal_a">
                                     <div>Deposit: <span class="investment">$30</span></div>
@@ -211,11 +213,13 @@
                                     Buy <span class="sel_inv"></span> worth package.
                                 </p>
                                 <p>
-                                    Or <span><b><a class="another" href="./packages.html">Select another package</a></b></span>
+                                    Or <span><b><a class="another" href="#">Select another package</a></b></span>
                                 </p>
+                                <p style="color: crimson; opacity: .8">Make sure you enter a valid transaction code, otherwise your payment might not be processed !!</p>
+
                                 <div class="sub_info">
                                     <div>
-                                        <input type="text" placeholder="M-pesa code">
+                                        <input type="text" placeholder="M-pesa code" class="index_code">
                                     </div>
                                     <div>
                                         <button class="btn next_page next_page_index">
@@ -266,7 +270,8 @@
                 Transaction History
             </h1>
 
-            <p>Check out our recent activity; recent transactions involving withdrawals and deposits.</p>
+            <p>Check out our clients' current investments and withdrawals.</p>
+            <p>Join 24HRFX and get access to such great deals.</p>
         </div>
 
         <div class="history_general">
@@ -275,15 +280,15 @@
                     <h2>Current Investments</h2>
                 </div>
                 <div class="depo_under">
-                    <div>Florida</div>
-                    <div>$200.00</div>
+                    <div>Mamba</div>
+                    <div>$500.00</div>
                 </div>
                 <div class="depo_under">
                     <div>Omni_2.0</div>
                     <div>$170.04</div>
                 </div>
                 <div class="depo_under">
-                    <div>Sunaina</div>
+                    <div>Sue_san</div>
                     <div>$250.80</div>
                 </div>
                 <div class="depo_under">
@@ -295,8 +300,8 @@
                     <div>$600.76</div>
                 </div>
                 <div class="depo_under">
-                    <div>Siki03_hida</div>
-                    <div>$550.49</div>
+                    <div>Satoshi</div>
+                    <div>$250.49</div>
                 </div>
             </div>
 
@@ -309,8 +314,8 @@
                     <div>$406.00</div>
                 </div>
                 <div class="with_under">
-                    <div>Koke</div>
-                    <div>$610.04</div>
+                    <div>Msafi</div>
+                    <div>$798.04</div>
                 </div>
                 <div class="with_under">
                     <div>Siki03_hida</div>
@@ -318,11 +323,11 @@
                 </div>
                 <div class="with_under">
                     <div>Debora_20</div>
-                    <div>$150.22</div>
+                    <div>$1150.22</div>
                 </div>
                 <div class="with_under">
                     <div>Sunaina</div>
-                    <div>$207.60</div>
+                    <div>$440.60</div>
                 </div>
                 <div class="with_under">
                     <div>Pree067_sam</div>
@@ -346,40 +351,55 @@
         const deal_f = document.querySelector ('.deal_f');
         const grid = document.querySelector ('.grid');
         const sel_inv = document.querySelector ('.sel_inv');
+        const another = document.querySelector ('.another');
+        const p_ins = document.querySelector ('.p_ins');
 
         const pay_inst = document.querySelector ('.pay_inst');
         const logo_pack = document.querySelector('.logo_pack');
         const log_pack = document.querySelector('.logout_pack');
 
+        
         deal_a.addEventListener ('click', ()=> {
             pay_inst.classList.remove ('hidden');
             grid.classList.add ('hidden');
+            p_ins.classList.add ('hidden');
             sel_inv.innerHTML = "$30";
         })
         deal_b.addEventListener ('click', ()=> {
             pay_inst.classList.remove ('hidden');
             grid.classList.add ('hidden');
+            p_ins.classList.add ('hidden');
             sel_inv.innerHTML = "$40";
         })
         deal_c.addEventListener ('click', ()=> {
             pay_inst.classList.remove ('hidden');
             grid.classList.add ('hidden');
+            p_ins.classList.add ('hidden');
             sel_inv.innerHTML = "$50";
         })
         deal_d.addEventListener ('click', ()=> {
             pay_inst.classList.remove ('hidden');
             grid.classList.add ('hidden');
+            p_ins.classList.add ('hidden');
             sel_inv.innerHTML = "$100";
         })
         deal_e.addEventListener ('click', ()=> {
             pay_inst.classList.remove ('hidden');
             grid.classList.add ('hidden');
+            p_ins.classList.add ('hidden');
             sel_inv.innerHTML = "$150";
         })
         deal_f.addEventListener ('click', ()=> {
             pay_inst.classList.remove ('hidden');
             grid.classList.add ('hidden');
+            p_ins.classList.add ('hidden');
             sel_inv.innerHTML = "$200";
+        })
+
+        another.addEventListener ('click', ()=> {
+            pay_inst.classList.add ('hidden');
+            grid.classList.remove ('hidden');
+            p_ins.classList.remove ('hidden');
         })
     </script>
 </body>

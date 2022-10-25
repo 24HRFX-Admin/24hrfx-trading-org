@@ -83,8 +83,8 @@
         <div class="enter_fields hidden">
             <p>Fill in your full names (as registered with M-pesa services) and your mobile number below:</p>
             <div class="fields">
-                <input type="text" placeholder="Full Name">
-                <input type="text" placeholder="Mobile Number">
+                <input type="text" placeholder="Full Name" class="fullName">
+                <input type="text" placeholder="Mobile Number" class="mobileNumber">
             </div>
             <div class="nxt_hold">
                 <button class="btn nxt_msg">
@@ -164,9 +164,10 @@
             <p>
                 Or <span><b><a class="another" href="./packages.html">Select another package</a></b></span>
             </p>
+            <p style="color: crimson; opacity: .8">Make sure you enter a valid transaction code, otherwise your payment might not be processed !!</p>
             <div class="sub_info">
                 <div>
-                    <input type="text" placeholder="M-pesa code">
+                    <input type="text" placeholder="M-pesa code" class="pack_code_a">
                 </div>
                 <div>
                     <button class="btn next_page next_page_a">
@@ -197,9 +198,10 @@
             <p>
                 3. Enter the M-pesa confirmation code below:
             </p>
+            <p style="color: crimson; opacity: .8">Make sure you enter a valid transaction code, otherwise your payment might not be processed !!</p>
             <div class="sub_info">
                 <div>
-                    <input type="text" placeholder="M-pesa code">
+                    <input type="text" placeholder="M-pesa code" class="pack_code_b">
                 </div>
                 <div>
                     <button class="btn next_page nxt_pack">
@@ -331,11 +333,18 @@
 
 
 
-        const nxt_p = document.querySelector ('.next_page_a');
+        const nxt_a = document.querySelector ('.next_page_a');
+        const pca = document.querySelector ('.pack_code_a');
 
-        nxt_p.addEventListener ('click', ()=> {
-            alert("Your Payment is being processed. Please await a responce from 24HRFX TRADING ORG.");
-            window.location = "./packages.html";
+        nxt_a.addEventListener ('click', ()=> {
+
+            if (pca.value == "") {
+                alert("Fill in the required field !")
+            }
+            else {
+                alert("Your Payment is being processed. Please wait for a response from 24HRFX TRADING ORG.");
+                window.location = "./packages.html";
+            }
         })
 
 

