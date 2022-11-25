@@ -39,9 +39,12 @@ db.once ('open', ()=> console.log ("Connected to the database"));
 app.use ('/', require('./routes/pages'));
 app.use ('/auth', require('./routes/auth'));
 
+
+app.listen ();
+/*
 const port = process.env.PORT || 8000;
 
 app.listen (port, ()=> {
     console.log ('server started on port')
 })
-
+*/
