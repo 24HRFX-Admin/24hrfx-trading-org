@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24HRFX Trading - FAQ</title>
+
+    <link rel="stylesheet" href="/CSS/main.css">
+
+
+    <style>
+            @media (max-width: 2040px) {
+                .wrap {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+                .home_hold {
+                    width: 120px;
+                }
+                .home_hold button {
+                    width: 100%;
+                }
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="home_page">
+            <div class="menu_log wrap">
+                <div class="logo_faq logo">
+                    <img src="/Images/logo.png" alt="logo">
+                </div>
+
+                <div class="home_hold">
+                    <button class="btn logout logout_faq">
+                        Home
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main style="padding-top: 0">
+
+        <h1 class="h_faq">FAQ,s</h1>
+        <p class="p_faq">Here are some frequently asked questions, concerning 24HRFX company org. we Hope that they are helpful and useful to you, in any area where you feel stuck.</p>
+
+        <div class="accordion">
+            <div class="faq">
+              <div class="question">
+                <p>What is a 24HRFX?<span><img src="Images/icon-arrow.svg" alt="arrow"></span></p>
+              </div>
+              <div class="answer">
+                <p>24HRFX TRADING ORG is a company made so that investors and new bie traders with
+                    Zero trading experience can successfully make profit.
+                    Our company, unlike any other, guarantees fixed profit every 24 hours
+                    Interested investors who invest with us get their stated profit regardless of market conditions.</p>
+              </div>
+            </div>
+    
+            <div class="faq">
+              <div class="question">
+                <p><span>How does 24HRFX earn profits for its members? </span><span><img src="Images/icon-arrow.svg" alt="arrow"></span></p>
+              </div>
+              <div class="answer">
+                <p>  We are involved in cloud mining, which enables our company to earn Bitcoins.</p>
+              </div>
+            </div>
+    
+            <div class="faq">
+              <div class="question">
+                <p><span>Is there a mobile app? </span><span><img src="Images/icon-arrow.svg" alt="arrow"></span></p>
+              </div>
+              <div class="answer">
+                <p>We are currently working to develop a mobile app that will make it easier for our customers/ clients/ investors to access our products and services.</p>
+              </div>
+            </div>
+    
+            <div class="faq">
+              <div class="question">
+                <p><span>Who can be a client of 24HRFX Company Org? </span><span><img src="Images/icon-arrow.svg" alt="arrow"></span></p>
+              </div>
+              <div class="answer">
+                <p>Anyone can be a client, regardless of nationality or residence. The onl condition is that clients must be 18 years of age or older.</p>
+              </div>
+            </div>
+
+            <div class="faq">
+                <div class="question">
+                  <p><span>How do I activate my 24HRFX account? </span><span><img src="Images/icon-arrow.svg" alt="arrow"></span></p>
+                </div>
+                <div class="answer">
+                  <p>All you have to do to activete your account is to buy your first package and submit the payment code for verification. You will then receive an email with your User Id, which you will use to login.</p>
+                </div>
+            </div>
+
+            <div class="faq">
+                <div class="question">
+                  <p><span>Can I open several accounts in your program? </span><span><img src="Images/icon-arrow.svg" alt="arrow"></span></p>
+                </div>
+                <div class="answer">
+                  <p>No, you cannot open several accouts in 24HRFX, using the same computer and the same IP Address.</p>
+                </div>
+            </div>
+
+            <div class="faq">
+                <div class="question">
+                  <p><span>What if I can't Login because i've Forgotten My password? </span><span><img src="Images/icon-arrow.svg" alt="arrow"></span></p>
+                </div>
+                <div class="answer">
+                  <p>It's because you have not purchased your first package. To log in you need a user id which you'll be given after investing.</p>
+                </div>
+            </div>
+
+            <div class="faq">
+                <div class="question">
+                  <p><span>How can I withdraw funds?</span><span><img src="Images/icon-arrow.svg" alt="arrow"></span></p>
+                </div>
+                <div class="answer">
+                  <p>Login to your account using your username, User Id and your password, then go to the withdrawals section and make a withdrawal request.</p>
+                </div>
+            </div>
+
+          </div>
+    </main>
+
+    <script>
+
+    //Accordion
+
+    const questions = document.querySelectorAll('.question');
+
+    for (i=0; i < questions.length; i++) {
+        questions[i].addEventListener('click',change);
+        function change() {
+            this.classList.toggle ('active');
+        };
+    }
+
+    
+    const log_faq = document.querySelector('.logout_faq');
+
+        log_faq.addEventListener ('click', ()=> {
+            window.location = "/";
+        })
+  </script>
+</body>
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24HRFX Trading - Admin_Edit_History</title>
+
+    <link rel="stylesheet" href="/CSS/main.css">
+
+     <style>
+        main {
+            padding: 10px;
+        }
+       h1 {
+        color: darkcyan;
+        font-size: 32px;
+       }
+       .admin_form {
+        margin-top: 40px;
+       }
+        .field {
+        margin-bottom: 10px;
+        }
+
+        .field label {
+        display: block;
+        font-size: 12px;
+        color: #777;
+        }
+
+        .field input {
+        display: block;
+        min-width: 250px;
+        line-height: 1.5;
+        font-size: 14px;
+        }
+
+        input[type="submit"] {
+        display: block;
+        padding: 6px 30px;
+        font-size: 14px;
+        background-color: #4460AA;
+        color: #fff;
+        border: none
+        }
+
+        input[type="submit"]:hover {
+            cursor: pointer;
+        }
+
+        .push-hold {
+            width: 250px;
+        }
+
+        .push-hold button {
+            width: 100%;
+        }
+
+        .btn_go {
+            background-color:#4460AA;
+            width: 90%;
+            margin: auto;
+            padding: 8px;
+            border: none;
+            border-radius: 4px;
+            color:blanchedalmond;
+            font-weight: 600;
+        }
+
+        .btn_go:hover{
+            background-color:#4460FF;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="home_page">
+            <div class="menu_log">
+                <div class="logo logo_abt">
+                    <img src="/Images/logo.png" alt="logo">
+                </div>
+                <div class="menu">
+                    <img class="icon_menu" src="/Images/icon-menu.svg" alt="logo">
+                    <img class="icon_close_menu disappear" src="/Images/icon-close-menu.svg" alt="logo">
+                </div>
+            </div>
+            <nav class="nav_2">
+                <div class="under_nav">
+                    <a href="/users">Users</a>
+                </div>
+                <div class="under_nav">
+                    <a href="/admin">ID_Mail</a>
+                </div>
+                <div class="under_nav">
+                    <a href="/email2">Withdrawal_Mail</a>
+                </div>
+                <div class="under_nav">
+                    <a href="/balance">Edit Balance</a>
+                </div>
+                <div class="under_nav">
+                    <a href="/history">Edit History</a>
+                </div>
+                <div class="hold under_nav">
+                    <button class="btn logout logout_p1">
+                        Log Out
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+
+            <div class="error-message">
+                {{#if message }}
+                    <p class="alert">{{message}}</p>
+                {{/if}}
+            </div>
+
+            <div class="success-message">
+                {{#if message2 }}
+                    <p class="alert">{{message2}}</p>
+                {{/if}}
+            </div>
+
+        <div class="inv_edit">
+
+            <h1>Edit current investments</h1>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Amount</th>
+                        <th>Update</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <th>1</th>
+                        <form action="/auth/userA" method="POST">
+                            <td><input type="text" placeholder="Name" id="inv_name_a" name="nameA"></td>
+                            <td><input type="text" placeholder="Amount" id="inv_am_a" name="amountA"></td>
+                            <td class="go"><button class="btn_go" type="submit">Go</button></td>
+                        </form>
+
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <form action="/auth/userB" method="POST">
+                            <td><input type="text" placeholder="Name" id="inv_name_b" name="nameB"></td>
+                            <td><input type="text" placeholder="Amount" id="inv_am_b" name="amountB"></td>
+                            <td class="go"><button  class="btn_go" type="submit">Go</button></td>
+                        </form>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <form action="/auth/userC" method="POST">
+                            <td><input type="text" placeholder="Name" id="inv_name_c" name="nameC"></td>
+                            <td><input type="text" placeholder="Amount" id="inv_am_c" name="amountC"></td>
+                            <td class="go"><button class="btn_go" type="submit">Go</button></td>
+                        </form>
+                    </tr>
+                    <tr>
+                        <th>4</th>
+                        <form action="/auth/userD" method="POST">
+                            <td><input type="text" placeholder="Name" id="inv_name_d" name="nameD"></td>
+                            <td><input type="text" placeholder="Amount" id="inv_am_d" name="amountD"></td>
+                            <td class="go"><button class="btn_go" type="submit">Go</button></td>
+                        </form>
+                    </tr>
+                    <tr>
+                        <th>5</th>
+                        <form action="/auth/userE" method="POST">
+                            <td><input type="text" placeholder="Name" id="inv_name_e" name="nameE"></td>
+                            <td><input type="text" placeholder="Amount" id="inv_am_e" name="amountE"></td>
+                            <td class="go"><button class="btn_go" type="submit">Go</button></td>
+                        </form>
+                    </tr>
+                    <tr>
+                        <th>6</th>
+                        <form action="/auth/userF" method="POST">
+                            <td><input type="text" placeholder="Name" id="inv_name_f" name="nameF"></td>
+                            <td><input type="text" placeholder="Amount" id="inv_am_f" name="amountF"></td>
+                            <td class="go"><button class="btn_go" type="submit">Go</button></td>
+                        </form>
+                    </tr>
+                </tbody>
+            </table>
+
+<!--
+
+            <div class="push-hold">
+                <button id="pushinvs" class="btn" type="submit">
+                    Update Current Invesments
+                </button>
+            </div>
+        </div>
+-->
+        <div class="with_edit">
+
+            <h1>Edit current Withdrawals</h1>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Amount</th>
+                        <th>Update</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>1</th>
+                        <form action="/auth/userG" method="POST">
+                            <td><input type="text" placeholder="Name" id="with_name_a" name="nameG"></td>
+                            <td><input type="text" placeholder="Amount" id="with_am_a" name="amountG"></td>
+                            <td class="go"><button class="btn_go" type="submit">Go</button></td>
+                        </form>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <form action="/auth/userH" method="POST">
+                            <td><input type="text" placeholder="Name" id="with_name_b" name="nameH"></td>
+                            <td><input type="text" placeholder="Amount" id="with_am_b" name="amountH"></td>
+                            <td class="go"><button class="btn_go" type="submit">Go</button></td>
+                        </form>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <form action="/auth/userI" method="POST">
+                            <td><input type="text" placeholder="Name" id="with_name_c" name="nameI"></td>
+                            <td><input type="text" placeholder="Amount" id="with_am_c" name="amountI"></td>
+                            <td class="go"><button class="btn_go" type="submit">Go</button></td>
+                        </form>
+                    </tr>
+                    <tr>
+                        <th>4</th>
+                        <form action="/auth/userJ" method="POST">
+                            <td><input type="text" placeholder="Name" id="with_name_d" name="nameJ"></td>
+                            <td><input type="text" placeholder="Amount" id="with_am_d" name="amountJ"></td>
+                            <td class="go"><button class="btn_go" type="submit">Go</button></td>
+                        </form>
+                    </tr>
+                    <tr>
+                        <th>5</th>
+                        <form action="/auth/userK" method="POST">
+                            <td><input type="text" placeholder="Name" id="with_name_e" name="nameK"></td>
+                            <td><input type="text" placeholder="Amount" id="with_am_e" name="amountK"></td>
+                            <td class="go"><button class="btn_go" type="submit">Go</button></td>
+                        </form>
+                    </tr>
+                    <tr>
+                        <th>6</th>
+                        <form action="/auth/userL" method="POST">
+                            <td><input type="text" placeholder="Name" id="with_name_f" name="nameL"></td>
+                            <td><input type="text" placeholder="Amount" id="with_am_f" name="amountL"></td>
+                            <td class="go"><button class="btn_go" type="submit">Go</button></td>
+                        </form>
+                    </tr>
+                </tbody>
+            </table>
+
+<!--
+            <div class="push-hold">
+                <button id="pushwiths" class="btn">
+                    Update Current Withdrawals
+                </button>
+            </div>
+-->
+        </div>
+    </main>
+
+    <script src="/intro.js"></script>
+    <script src="/edits.js"></script>
+
+
+    <script>
+        const log_p1 = document.querySelector('.logout_p1');
+
+        log_p1.addEventListener ('click', ()=> {
+            window.location = "/";
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@200;300;400;500&family=Combo&family=Epilogue:wght@500&family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@400;500;600&family=League+Spartan:wght@300;400;500;600;700&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Open+Sans:wght@500&family=Raleway:wght@500&family=Roboto+Slab:wght@400;500;600;700&family=Rubik:wght@300;500&display=swap');
+:root {
+    --main-bg:  hsl(233, 40%, 5%);
+    --container-bg: hsl(244, 38%, 16%);
+    --input-bg: hsl(240, 38%, 10%);
+    --input-txt: hsl(0, 0%, 100%, .7);
+    --btn: cyan;
+    --btn-hover: hsl(233, 47%, 7%);
+    --btn-active: hsl(0, 0%, 100%, .7);
+    --h-text: cyan;
+    --txt: hsl(0, 0%, 100%, .7);
+    --txt-fade: hsl(0, 0%, 100%, .4);
+}
+
+body {
+    background-color: var(--main-bg);
+    font-family: 'raleway', sans-serif;
+    padding-top: 40px;
+}
+.info_a, .info_b {
+    background-color:var(--container-bg);
+}
+h1 {
+    text-align: center;
+}
+ 
+h1 span:nth-child(1) {
+    color: var(--txt);
+}
+h1 span:nth-child(2) {
+    color: var(--h-text);
+}
+input {
+    background-color: var(--input-bg);
+    color: var(--input-txt);
+}
+.options {
+    border-bottom: 2px solid var(--txt-fade);
+}
+.btn {
+    background-color: var(--btn);
+}
+.btn:hover {
+    background-color: var(--btn-hover);
+    cursor: pointer;
+    color: var(--btn);
+    border: 2px solid var(--btn);
+}
+.btn:active {
+    color: var(--btn-active);
+    border: 2px solid var(--btn);
+}
+.info_a, .info_b{
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 12px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+form > div {
+    margin-bottom: 16px;
+    width: 250px;
+}
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
+.btn {
+    border: none;
+    border-radius: 10px;
+    padding: 10px 10px;
+    font-weight: 600;
+    font-size: 18px;
+    width: 40%;
+    margin-top: 16px;
+}
+.btn:hover {
+    padding: 8px 10px;
+}
+.btn:active {
+    padding: 8px 10px;
+}
+.error-message {
+    margin-top: 40px;
+    background-color: hsl(224, 38%, 26%);
+    padding: 0px 6px;
+    border-radius: 12px;
+}
+.alert {
+    color: crimson;
+    font-size: 18px;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+}
+p {
+text-align: center;
+word-spacing: 5px;
+}

@@ -1,0 +1,395 @@
+:root {
+    --main-bg:  hsl(233, 40%, 5%);
+    --container-bg: hsl(244, 38%, 16%);
+    --input-bg: hsl(240, 38%, 10%);
+    --input-txt: hsl(0, 0%, 100%, .7);
+    --btn: cyan;
+    --btn-hover: hsl(233, 47%, 7%);
+    --btn-active: hsl(0, 0%, 100%, .7);
+    --h-text: cyan;
+    --txt: hsl(0, 0%, 100%, .7);
+    --txt-fade: hsl(0, 0%, 100%, .4);
+}
+
+body {
+    background-color: var(--main-bg);
+}
+.info_a, .info_b, .info_c {
+    background-color:var(--container-bg);
+}
+.info_c {
+    padding: 16px 4px;
+    border-radius: 12px;
+}
+input {
+    background-color: var(--input-bg);
+    color: var(--input-txt);
+}
+.options {
+    border-bottom: 2px solid var(--txt-fade);
+}
+.btn {
+    background-color: var(--btn);
+}
+.btn:hover {
+    background-color: var(--btn-hover);
+    cursor: pointer;
+    color: var(--btn);
+    border: 2px solid var(--btn);
+}
+.btn:active {
+    color: var(--btn-active);
+    border: 2px solid var(--btn);
+}
+#btn_r {
+    background-color: darkcyan;
+}
+#btn_r:hover {
+    background-color: var(--btn-hover);
+    cursor: pointer;
+    color: var(--btn);
+    border: 2px solid darkcyan;
+}
+.sign_in {
+    background-color: var(--btn-hover);
+    color: var(--btn);
+    border: 2px solid var(--btn);
+
+    &:hover {
+        cursor: pointer;
+    } 
+}
+h1 {
+    span:nth-child(1) {
+        color: var(--txt);
+    }
+    span:nth-child(2) {
+        color: var(--h-text);
+    }
+}
+h2 {
+    color: var(--h-text);
+}
+p {
+    color: var(--txt);
+}
+.options {
+    color: var(--txt);
+    
+    & div:hover {
+        color: var(--h-text);
+        cursor: pointer;
+    }
+
+    .active {
+        color: var(--h-text);
+    }
+}
+
+.forgot {
+    color: var(--txt-fade);
+}
+.forgot:hover {
+    color: var(--txt);
+}
+
+.show svg {
+    fill: white;
+}
+.name {
+    color: var(--txt);
+    font-size: 32px;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+.mail_stated {
+    color: var(--txt);
+    font-size: 24px;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+.status {
+    padding: 18px 0;
+    color: var(--txt);
+    font-size: 24px;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 3px;
+
+    span {
+        color: red;
+    }
+}
+h2 {
+    font-weight: 600;
+    font-size: 32px;
+    color: var(--h-text);
+}
+.illustrate {
+    h1 {
+        @media (max-width: 2560px) {
+            font-size: 44px;
+        }
+        @media (max-width: 600px) {
+            font-size: 32px;
+            
+        }
+
+        span:nth-child(1) {
+            color: hsl(277, 64%, 61%);
+        }
+        span:nth-child(2) {
+            color: var(--txt);
+        }
+        span:nth-child(3) {
+            color: var(--h-text);
+        }
+        span:nth-child(4) {
+            color: var(--txt);
+        }
+    }
+}
+header {
+    background-color:hsl(233, 47%, 12%);
+}
+a {
+    color : var(--txt);
+    &:hover {
+        color: cyan;
+    }
+}
+.link_to {
+    color : var(--main-bg);
+
+    &:hover {
+        color: cyan;
+    }
+}
+.logout {
+    a {
+        font-weight: 600;
+        color: var(--main-bg);
+    }
+    a:hover {
+        color: cyan;
+    }
+}
+.wait {
+    background-color: var(--container-bg);
+}
+.abt {
+    span:nth-child(1) {
+        color: var(--txt);
+    }
+    span:nth-child(2) {
+        color: var(--btn);
+    }
+    span:nth-child(3) {
+        color: var(--txt);
+    }
+}
+
+.faq {
+    background-color: var(--container-bg);
+
+    .question p {
+        color: var(--txt-fade);
+
+        &:hover {
+            color: var(--txt);
+        }
+    }
+    .answer p {
+        color: var(--txt);
+    }
+}
+
+.h_faq, .h_pack {
+    color: var(--btn);
+}
+.trans_hist {
+    color:hsl(277, 64%, 61%);
+}
+.history_general {
+    h2 {
+        color: darkcyan;
+    }
+
+    & > div {
+        background-color: var(--container-bg);
+
+        & > div:nth-child(1) {
+            border-bottom: 1px solid var(--txt-fade);
+        }
+
+        & > div {
+
+            div:nth-child(1) {
+                color:darkseagreen;
+            }
+        }
+    }
+
+    .depo_under {
+        div:nth-child(2) {
+            color:chartreuse;
+            opacity: .7;
+        }
+    }
+
+    .with_under {
+        div:nth-child(2) {
+            color:crimson;
+        }
+    }
+}
+
+
+.deal {
+    background-color: var(--container-bg);
+
+    & > div {
+        color: var(--txt);
+    }
+    & > div:nth-child(1) {
+        span {
+            color: darkcyan;
+        }
+    }
+    & > div:nth-child(2) {
+        span {
+            color: chartreuse;
+            opacity: .8;
+        }
+    }
+
+}
+
+.pay_inst, .pay_inst_b {
+    h1 {
+        color: darkcyan;
+    }
+    background-color: var(--container-bg);
+    border: 2px solid var(--txt-fade) ;
+    padding: 18px;
+    border-radius: 12px
+}
+
+footer {
+    background-color: black;
+}
+
+.sel_inv {
+    color: darkcyan;
+}
+
+.deal:hover {
+    background-color: hsl(234, 38%, 26%);
+}
+
+.another {
+    color:hsl(277, 64%, 61%);
+    font-size: 20px;
+}
+
+.prof_h {
+    color:hsl(277, 64%, 61%);
+}
+
+.acc {
+    color:hsl(277, 64%, 61%);
+}
+
+.name_acc {
+    font-size: 20px;
+    color: var(--txt);
+    margin-bottom: 8px;
+}
+.mail_acc {
+    font-size: 20px;
+    color: var(--txt);
+}
+
+table {
+    background-color: var(--txt);
+
+    tr, th {
+        padding: 0.6rem;
+    }
+
+    thead {
+        background-color: hsl(214, 38%, 36%);
+    }
+    tbody {
+        background-color:hsl(244, 38%, 16%);
+    }
+}
+
+.table_acc {
+    background-color: var(--txt);
+
+    tr, th {
+        padding: 0.6rem;
+    }
+    & tr:nth-child(1) {
+        background-color: hsl(214, 38%, 36%);
+    }
+    & tr:nth-child(2) {
+        background-color:hsl(244, 38%, 16%);
+    }
+}
+.table_users {
+    background-color: var(--txt);
+
+    tr, th {
+        padding: 0.6rem;
+    }
+
+    & tr {
+        background-color:hsl(244, 38%, 16%);
+    }
+    .table_heads {
+        background-color:hsl(214, 38%, 36%);
+    }
+}
+.enter_fields {
+    background-color: var(--container-bg);
+    padding: 1rem 0.4rem;
+    border-radius: 12px;
+}
+.msg {
+    background-color: var(--container-bg);
+}
+.account {
+    background-color:hsl(254, 38%, 16%);
+    padding: 8px;
+    border-radius: 12px;
+
+    &:hover {
+        background-color: hsl(244, 38%, 26%);
+    }
+}
+
+.reg_r:hover {
+    color: cyan;
+    cursor: pointer;
+}
+.phone_nums {
+    margin-left: 40px;
+}
+.phone_nums span {
+    color: lightblue;
+}
+.phone_nums span:nth-child(1) {
+    color: var(--txt);
+}
+
+.convert {
+    background-color:hsl(244, 38%, 26%)
+}
+
+.processing {
+    background-color: var(--container-bg);
+}

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+
+    <link rel="stylesheet" href="/CSS/main.css">
+</head>
+<body>
+
+    <header>
+        <div class="home_page">
+            <div class="menu_log">
+                <div class="logo">
+                    <img src="/Images/logo.png" alt="logo">
+                </div>
+                <div class="menu">
+                    <img class="icon_menu" src="/Images/icon-menu.svg" alt="logo">
+                    <img class="icon_close_menu disappear" src="/Images/icon-close-menu.svg" alt="logo">
+                </div>
+            </div>
+            <nav class="nav_1">
+                <div class="under_nav">
+                    <a href="/aboutb">About</a>
+                </div>
+                <div class="under_nav">
+                    <a href="/faq2">FAQ</a>
+                </div>
+                <div class="under_nav">
+                    <a href="/packages2">Packages</a>
+                </div>
+                <div class="hold under_nav">
+                    <button class="btn">
+                        <a href="/login" class="link_to">
+                          Log in / Register
+                        </a>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="illustrate illustration">
+            <div class="begin">
+                <h1>
+                    <span>Buy, Sell & Swap in</span>
+                    <span>24HR</span>
+                    <span>FX</span>
+                    <span>Trading Org.</span>
+                </h1>
+                <p>Create an account or log in if you already have one, to have access to our products and services.</p>
+                <div class="holder start">
+                    <button type="button" class="btn">
+                        <a class="link_to" href="/login">Get Started</a>
+                    </button>
+                </div>
+            </div>
+            <div>
+                <img src="/Images/banner.png" alt="crypto">
+            </div>
+    </div>
+
+    <div class="history">
+        <h1 class="trans_hist">
+            Transaction History
+        </h1>
+   
+        <p>Check out our clients' current investments and withdrawals.</p>
+        <p>Join 24HRFX and get access to such great deals.</p>
+    </div>
+
+<!--
+    <div class="history_general">
+        <div class="deposits">
+            <div>
+                <h2>Current Investments</h2>
+            </div>
+            
+            <table>
+                <thead>
+                    <th>No</th>
+                    <th>Name</th>
+                    <th>Amount</th>
+                </thead>
+
+                <tbody id="output_invs"></tbody>
+            </table>
+        </div>
+
+        <div class="withdrawals">
+            <div>
+                <h2>Previous Withdrawals</h2>
+            </div>
+            <table>
+                <thead>
+                    <th>No</th>
+                    <th>Name</th>
+                    <th>Amount</th>
+                </thead>
+
+                <tbody id="output_withs"></tbody>
+            </table>
+        </div>
+    </div>
+-->
+
+
+    <div class="history_general">
+        <div class="deposits">
+            <div>
+                <h2>Current Investments</h2>
+            </div>
+            <div class="depo_under">
+                <div>Mamba</div>
+                <div>$500.00</div>
+            </div>
+            <div class="depo_under">
+                <div>Omni_2.0</div>
+                <div>$170.04</div>
+            </div>
+            <div class="depo_under">
+                <div>Sue_san</div>
+                <div>$250.80</div>
+            </div>
+            <div class="depo_under">
+                <div>Debora_20</div>
+                <div>$650.22</div>
+            </div>
+            <div class="depo_under">
+                <div>Pac.man</div>
+                <div>$600.76</div>
+            </div>
+            <div class="depo_under">
+                <div>Satoshi</div>
+                <div>$250.49</div>
+            </div>
+        </div>
+
+        <div class="withdrawals">
+            <div>
+                <h2>Previous Withdrawals</h2>
+            </div>
+            <div class="with_under">
+                <div>Sunaina</div>
+                <div>$406.00</div>
+            </div>
+            <div class="with_under">
+                <div>Msafi</div>
+                <div>$798.04</div>
+            </div>
+            <div class="with_under">
+                <div>Siki03_hida</div>
+                <div>$700.66</div>
+            </div>
+            <div class="with_under">
+                <div>Debora_20</div>
+                <div>$1150.22</div>
+            </div>
+            <div class="with_under">
+                <div>Sunaina</div>
+                <div>$440.60</div>
+            </div>
+            <div class="with_under">
+                <div>Pree067_sam</div>
+                <div>$300.76</div>
+            </div>
+        </div>
+    </div>
+
+
+<!--
+
+    <div class="history_general">
+
+        <div class="deposits">
+            <div>
+                <h2>Current Investments</h2>
+            </div>
+            {{#each results}}
+                <div class="depo_under">
+                    <div>{{this.Name}}</div>
+                    <div>{{this.Amount}}</div>
+                </div>
+            {{/each}}
+        </div>
+
+        <div class="withdrawals">
+            <div>
+                <h2>Previous Withdrawals</h2>
+            </div>
+            {{#each data}}
+                <div class="with_under">
+                    <div>{{this.Name}}</div>
+                    <div>{{this.Amount}}</div>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+-->
+
+    <script src="/intro.js"></script>
+    <!--<script src="/edits.js"></script>-->
+
+</body>
+</html>

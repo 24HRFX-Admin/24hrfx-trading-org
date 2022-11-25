@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+
+    <link rel="stylesheet" href="/CSS/main.css">
+
+    <style>
+        .check {
+            display: flex;
+            flex-direction: row;
+            align-items:center;
+            justify-content: space-around;
+            padding: 0 4px;
+        }
+
+        .check p {
+            text-align: left;
+            margin-left: 20px;
+        }
+        .check a {
+            text-decoration: underline;
+            color: hsl(277, 64%, 61%);
+        }
+        .check a:hover {
+            cursor: pointer;
+            color: aqua;
+        }
+        .check-box {
+            width: 18px;
+            height: 18px;
+            border-radius: 4px;
+            background-color: hsl(250, 38%, 6%);
+            border: 2px solid hsl(220, 38%, 26%);
+        }
+        .check-box:hover {
+            cursor: pointer;
+            background-color: cyan;
+        }
+        .checked {
+            background-color: cyan;
+        }
+        #btn_b {
+            margin-top: 0;
+        }
+        article {
+            width: 200px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        article div:nth-child(1) {
+            width: 100%;
+        }
+        article div:nth-child(1) button {
+            width: 100%;
+        }
+        .over_btn {
+            width: 100%;
+            height: 42px;
+            border-radius: 12px;
+            background-color: white;
+            opacity: .5;
+            position: absolute;
+            top: 0;
+
+        }
+    </style>
+
+
+</head>
+<body>
+    <main>
+        <h1 class="changing switching">
+            <span>User</span>
+            <span class="selected">Registration</span>
+        </h1>
+         <div class="info_b">
+                <form action="/auth/register" method="POST">
+                    <div>
+                        <input type="text" placeholder="First Name" id="f_name">
+                    </div>
+                    <div>
+                        <input type="text" placeholder="Last Name" id="l_name">
+                    </div>
+
+                    <div id="err_msg"></div>
+
+                    <div>
+                        <input id="mail" type="email" placeholder="Email Address" name="email">
+                        <div id="validity"></div>
+                    </div>
+
+                    <div>
+                        <input type="text" placeholder="Phone Number" class="p_no">
+                    </div>
+                    <div class="num_warn">
+                    </div>
+                    <div>
+                        <input id="user" type="text" placeholder="Set Username" name="username">
+                    </div>
+
+                    <div id="err_msg_b"></div>
+
+                    <div class="lock">
+                        <input id="password" class="inputs" type="password" placeholder="Password" name="password">
+
+                        <div class="show">
+                            <img class="reveal" src="/Images/show.svg" alt="show">
+                        </div>
+                    </div>
+
+                    <div class="lock">
+                        <input id="confirm" class="inputs" type="password" placeholder="Confirm password" name="passwordConfirm">
+
+                        <div class="show">
+                            <img class="reveal" src="/Images/show.svg" alt="show">
+                        </div>
+                    </div>
+
+                    <div class="confirmation"></div>  
+
+
+                    <div class="check">
+                        <div class="check-box"></div>
+                        <div>
+                            <p style="font-size: 18px">
+                                <span>I accept all the </span>
+                                <span>
+                                    <a href="/terms">Terms and conditions</a>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <article>
+                        <div>
+                            <button type="submit" class="btn" id="btn_b">Submit</button>
+                        </div>
+                        <div class="over_btn"></div>
+                    </article>
+
+                </form>
+
+
+                <div style="padding: 0 14px">
+                    <p style="color: lightblue">
+                        Already have an account? Click the button below to sign in. 
+                    </p>
+                </div>
+
+                <div class="holder">
+                    <button type="button" class="btn" id="btn_r">
+                        <a class="link_to" href="/login">Login</a>
+                    </button>
+                </div>
+            </div>
+
+            <div class="error-message">
+                {{#if message }}
+                    <p class="alert">{{message}}</p>
+                {{/if}}
+            </div>
+    </main>
+
+    <script src="/logs.js"></script>
+    <script>
+        const shows = document.querySelectorAll('.show');
+        const reveals = document.querySelectorAll('.reveal');
+        const passwords = document.querySelectorAll('.inputs');
+
+        shows.forEach (show => {
+            show.addEventListener ('click', ()=> {
+
+                passwords.forEach (password => {
+                    if (password.type === 'password') {
+                        password.setAttribute ('type', 'text');
+
+                        reveals.forEach (reveal => {
+                            reveal.src ="Images/hide.svg";
+                        })
+                    }
+                    else {
+                        password.setAttribute ('type', 'password');
+
+                        reveals.forEach (reveal => {
+                            reveal.src ="Images/show.svg";
+                        })
+                    }
+                })
+            });
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24HRFX Trading - Admin_Users</title>
+
+    <link rel="stylesheet" href="/CSS/main.css">
+
+     <style>
+        main {
+            padding:10px;
+        }
+       h1 {
+        color: darkcyan;
+        font-size: 32px;
+       }
+       .admin_form {
+        margin-top: 40px;
+       }
+        .field {
+        margin-bottom: 10px;
+        }
+
+        .field label {
+        display: block;
+        font-size: 12px;
+        color: #777;
+        }
+
+        input[type="submit"]:hover {
+            cursor: pointer;
+        }
+
+        .download {
+            height: 40px;
+            width: 200px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+        }
+        .download_txt {
+            border-radius: 12px 0 0 12px;
+            width: 80%;
+        }
+
+        .download_txt input{
+            border-radius: 12px 0 0 12px;
+            width: 100%;
+            color: black;
+            font-size: 18px;
+            font-weight: 600;
+            background-color: darkcyan;
+        }
+        .download_txt input:hover {
+            background-color: rgb(0, 95, 139);
+            color: white;
+            cursor: pointer;
+        }
+        .download_img {
+            border-radius: 0 12px 12px 0;
+            width: 20%;
+            background-color: rgb(0, 130, 139);
+            padding: 4px;
+        }
+        .download_img img {
+            border-radius: 0 12px 12px 0;
+            width: 100%;
+        }
+        .users {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        table {
+            width: 100%;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="home_page">
+            <div class="menu_log">
+                <div class="logo logo_abt">
+                    <img src="/Images/logo.png" alt="logo">
+                </div>
+                <div class="menu">
+                    <img class="icon_menu" src="/Images/icon-menu.svg" alt="logo">
+                    <img class="icon_close_menu disappear" src="/Images/icon-close-menu.svg" alt="logo">
+                </div>
+            </div>
+
+            <nav class="nav_2">
+                <div class="under_nav">
+                    <a href="/users">Users</a>
+                </div>
+                <div class="under_nav">
+                    <a href="/admin">ID_Mail</a>
+                </div>
+                <div class="under_nav">
+                    <a href="/email2">Withdrawal_Mail</a>
+                </div>
+                <div class="under_nav">
+                    <a href="/balance">Edit Balance</a>
+                </div>
+                <div class="under_nav">
+                    <a href="/history">Edit History</a>
+                </div>
+                <div class="hold under_nav">
+                    <button class="btn logout logout_p1">
+                        Log Out
+                    </button>
+                </div>
+            </nav>
+            
+        </div>
+    </header>
+    <!--
+    <main>
+
+        <% if (action = "add") { %> 
+
+        <% } 
+
+        else {%>
+
+            <div class="users">
+                <table>
+                    <tr>
+                        <th>Id</th>
+                        <th>User-Name</th>
+                        <th>Email</th>
+                        <th>User_ID</th>
+                        <th>Balance</th>
+                    </tr>
+
+                    <% if(users.length > 0) {
+                        users.forEach (function (data) {
+                        >%
+                            <tr>
+                                <td>
+                                    <%= results.Id %>
+                                </td>
+                                <td>
+                                    <%= results.Username %>
+                                </td>
+                                <td>
+                                    <%= results.Email %>
+                                </td>
+                                <td>
+                                    <%= results.User_ID %>
+                                </td>
+                                <td>
+                                    <%= results.Balance %>
+                                </td>
+                            </tr>
+                        %<
+                        })
+                    }
+
+                    else {>%
+                        <td colspan="5">No data Found</tr>
+                    %<}
+                    %>
+                </table>
+            </div>
+
+        <% } %>
+
+    </main>
+    -->
+
+ 
+    <main>
+<!--
+        <form action="GET" method="/auth/displayusers">
+            <div class="download">
+                <div class="download_txt">
+                    <input type="submit" value="Download Users">
+                </div>
+                <div class="download_img">
+                    <img src="/Images/download.svg" alt="">
+                </div>
+            </div>
+        </form>
+-->
+        <h1>All Users</h1> 
+        <div class="users">
+            <table class="table_users">
+                    <thead>
+                        <tr class="table_heads ">
+                            <th>User-Name</th>
+                            <th>Email</th>
+                            <th>User_ID</th>
+                            <th>Balance</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                    {{#each results}}
+                        <tr>
+                            <td>
+                                {{this.username}}
+                            </td>
+                            <td>
+                                {{this.email}}
+                            </td>
+                            <td>
+                                {{this.userID}}
+                            </td>
+                            <td>
+                                {{this.balance}}
+                            </td>
+                        </tr>
+                    {{/each}}
+                    </tbody>
+            </table>
+        </div>
+
+    </main>
+ 
+
+
+    <script src="/intro.js"></script>
+
+    <script>
+        const log_p1 = document.querySelector('.logout_p1');
+
+        log_p1.addEventListener ('click', ()=> {
+            window.location = "/";
+        })
+    </script>
+</body>
+</html>

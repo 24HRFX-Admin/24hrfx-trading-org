@@ -1,0 +1,182 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+h1 {
+    font-size: 24px;
+    text-align: center;
+}
+h2 {
+    text-align: center;
+}
+p {
+    text-align: center;
+    word-spacing: 5px;
+}
+.container {
+    font-size: 18px;
+}
+input {
+    outline: none;
+    border: none;
+}
+.option {
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 1.8px;
+}
+.forgot {
+    text-decoration: none;
+}
+a {
+    text-decoration: none;
+    
+    @media (max-width: 2040px) {
+        font-size: 20px;
+    }
+    @media (max-width: 600px) {
+        font-size: 18px;
+    }
+}
+a:hover {
+    cursor: pointer;
+}
+.wait {
+    p {
+        @media (max-width: 2040px) {
+            font-size: 28px;
+        }
+        @media (max-width: 600px) {
+            font-size: 18px;
+        }
+    }
+}
+.abt {
+    @media (max-width: 2040px) {
+        font-size: 44px;
+    }
+    @media (max-width: 600px) {
+        font-size: 36px;
+    }
+}
+.p_abt {
+    @media (max-width: 2040px) {
+        font-size: 24px;
+    }
+    @media (max-width: 600px) {
+        font-size: 18px;
+    }
+}
+
+.faq {
+    .question:hover {
+        cursor: pointer;
+    }
+    
+    p {
+        text-align:left;
+        
+        @media (max-width: 2040px) {
+            font-size: 24px;
+        }
+        @media (max-width: 600px) {
+            font-size: 18px;
+        }
+    }
+}
+
+.h_faq {
+    @media (max-width: 2040px) {
+        font-size: 36px;
+    }
+    @media (max-width: 600px) {
+        font-size: 28px;
+    }
+}
+.h_pack {
+    @media (max-width: 2040px) {
+        font-size: 36px;
+    }
+    @media (max-width: 600px) {
+        font-size: 28px;
+    }
+}
+.p_faq {
+    @media (max-width: 2040px) {
+        font-size: 24px;
+    }
+    @media (max-width: 600px) {
+        font-size: 18px;
+    }
+}
+
+.history_general {
+    h2 {
+        @media (max-width: 2040px) {
+            font-size: 32px;
+        }
+        @media (max-width: 600px) {
+            font-size: 24px;
+        }
+    }
+}
+
+.trans_hist {
+    @media (max-width: 2040px) {
+        font-size: 36px;
+    }
+    @media (max-width: 600px) {
+        font-size: 28px;
+    }
+}
+
+.deal {
+    margin-bottom: 0;
+    
+    & > div {
+        margin-bottom: 1rem;
+
+        @media (max-width: 2040px) {
+            font-size: 28px;
+        }
+        @media (max-width: 600px) {
+            font-size: 24px;
+        }
+    }
+    
+}
+
+
+.prof_h, .table_h {
+    @media (max-width: 2040px) {
+        font-size: 32px;
+    }
+    @media (max-width: 600px) {
+        font-size: 32px;
+    }
+}
+
+.table_h {
+    color: darkcyan;
+}
+td {
+    padding: 8px;
+    font-size: 18px;
+    color: var(--txt);
+}
+#name_stated {
+    margin-bottom: 10px;
+}
+
+.pay_inst p{
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+}
+
+.under_ans p{
+    font-size: 18px;
+}

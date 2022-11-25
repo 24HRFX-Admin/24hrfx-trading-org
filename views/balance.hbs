@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24HRFX Trading - Admin_Withdrawable Balanc</title>
+
+    <link rel="stylesheet" href="/CSS/main.css">
+
+     <style>
+        main {
+            padding: 10px;
+        }
+       h1 {
+        color: darkcyan;
+        font-size: 32px;
+       }
+       .admin_form {
+        margin-top: 40px;
+       }
+        .field {
+        margin-bottom: 10px;
+        }
+
+        .field label {
+        display: block;
+        font-size: 12px;
+        color: #777;
+        }
+
+        .field input {
+        display: block;
+        min-width: 250px;
+        line-height: 1.5;
+        font-size: 14px;
+        }
+
+        input[type="submit"] {
+        display: block;
+        padding: 6px 30px;
+        font-size: 14px;
+        background-color: #4460AA;
+        color: #fff;
+        border: none
+        }
+
+        input[type="submit"]:hover {
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="home_page">
+            <div class="menu_log">
+                <div class="logo logo_abt">
+                    <img src="/Images/logo.png" alt="logo">
+                </div>
+                <div class="menu">
+                    <img class="icon_menu" src="/Images/icon-menu.svg" alt="logo">
+                    <img class="icon_close_menu disappear" src="/Images/icon-close-menu.svg" alt="logo">
+                </div>
+            </div>
+            <nav class="nav_2">
+                <div class="under_nav">
+                    <a href="/users">Users</a>
+                </div>
+                <div class="under_nav">
+                    <a href="/admin">ID_Mail</a>
+                </div>
+                <div class="under_nav">
+                    <a href="/email2">Withdrawal_Mail</a>
+                </div>
+                <div class="under_nav">
+                    <a href="/balance">Edit Balance</a>
+                </div>
+                <div class="under_nav">
+                    <a href="/history">Edit History</a>
+                </div>
+                <div class="hold under_nav">
+                    <button class="btn logout logout_p1">
+                        Log Out
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <h1>Edit users' withdrawable balance</h1>
+
+        <p>Enter the email of the user you wish to edit their withdrawable balance.</p>
+
+        <div class="admin_form">
+            <form id="form" method="POST" action="/auth/editbalance">
+                <div class="field">
+                    <label for="email">Email Address</label>
+                    <input type="text" name="email" id="email">
+                </div>
+                <div class="field">
+                    <label for="balance">Withdrawable balance</label>
+                    <input type="text" name="balance" id="balance">
+                </div>
+
+                <input type="submit" id="button" value="Edit Balance" >
+            </form>
+        </div>
+
+        <div class="error-message">
+            {{#if message }}
+                <p class="alert">{{message}}</p>
+            {{/if}}
+        </div>
+
+    </main>
+
+    <script src="/intro.js"></script>
+
+    <script>
+        const log_p1 = document.querySelector('.logout_p1');
+
+        log_p1.addEventListener ('click', ()=> {
+            window.location = "/";
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/CSS/main.css">
+
+</head>
+<body>
+    <main>
+        <h1 class="changing switching">
+            <span>User</span>
+            <span class="selected">Login</span>
+        </h1>
+        <div class="info_a">
+                <form action="/auth/login" method="POST">
+                    <div>
+                        <input id="username" type="text" placeholder="userName" name="username">
+                    </div>
+                    <div>
+                        <input id="user_id" type="text" placeholder="User Id" name="userid">
+                    </div>
+                    <div class="lock">
+                        <input id="pass" class="inputs" type="password" placeholder="Password" name="password">
+
+                        <div class="show">
+                            <img class="reveal" src="/Images/show.svg" alt="show">
+                        </div>
+                    </div>
+                    <!--<div>
+                        <a href="#" class="forgot">
+                            Forgot Password?
+                        </a>
+                    </div>-->
+
+                    <div class="holder">
+                        <button type="submit" class="btn" id="btn_a">
+                        Log in
+                        </button>
+                    </div>
+                </form>
+
+                <div style="padding: 0 14px">
+                    <p style="color: lightblue">
+                        Don't have an account? Click the button below to sign up. 
+                    </p>
+                </div>
+
+                <div class="holder">
+                    <button type="button" class="btn" id="btn_r">
+                        <a class="link_to" href="/register">Register</a>
+                    </button>
+                </div>
+        </div>
+
+
+              
+            <div class="error-message">
+                    {{#if message }}
+                        <p class="alert">{{message}}</p>
+                    {{/if}}
+            </div>
+
+            
+
+           <!--<script src="/logs.js"></script>-->
+           <script>
+                const shows = document.querySelectorAll('.show');
+                const reveals = document.querySelectorAll('.reveal');
+                const passwords = document.querySelectorAll('.inputs');
+
+                shows.forEach (show => {
+                    show.addEventListener ('click', ()=> {
+
+                        passwords.forEach (password => {
+                            if (password.type === 'password') {
+                                password.setAttribute ('type', 'text');
+
+                                reveals.forEach (reveal => {
+                                    reveal.src ="/Images/hide.svg";
+                                })
+                            }
+                            else {
+                                password.setAttribute ('type', 'password');
+
+                                reveals.forEach (reveal => {
+                                    reveal.src ="/Images/show.svg";
+                                })
+                            }
+                        })
+                    });
+                })
+           </script>
+
+
+<!--
+           <script>
+                //AUTHENTICATE WITH LOGIN
+                const namePerson = document.querySelector('#name_stated');
+                const userNameSet = document.getElementById('user');
+                const next = document.querySelector ('.next');
+                const under_navigation = document.querySelector ('.under_nav');
+                const loginPress = document.querySelector('#btn_a');
+                const mailSet = document.querySelector('#mail_stated');
+                const name_put =document.querySelector ('#username').value;
+                //const emailAddress = document.querySelector ('#mail').value;
+
+                var storedName = localStorage.getItem('name');
+                var storedPw = localStorage.getItem('pw');
+                var storedMail = localStorage.getItem('email');
+                var user_ID = localStorage.getItem('user_ID');
+
+
+                loginPress.addEventListener ('click', ()=> {
+
+
+                    var userName = document.getElementById('username');
+                    var userPw = document.getElementById('pass');
+                    var identity = document.querySelector ('#user_id').value;
+                    var Admin = "Admin";
+                    var admin_userId = '605088';
+                    var userId = user_ID;
+
+
+                    if(identity === admin_userId  && userName.value == Admin && userPw.value == admin_userId){
+                        window.location = "./admin_index.html";
+                    }
+
+                    else if(userName.value == storedName && userPw.value == storedPw && identity === userId){
+                        window.location = "/account";
+                    }
+                    else{
+                        alert('Error on login');
+                    }
+                })
+
+           </script>
+-->
+    </main>
+</body>
+</html>

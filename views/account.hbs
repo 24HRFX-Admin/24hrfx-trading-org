@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24HRFX Trading - Account</title>
+
+    <link rel="stylesheet" href="/CSS/main.css">
+</head>
+<body>
+    <header>
+        <div class="home_page">
+            <div class="menu_log">
+                <div class="logo logo_pack">
+                    <img src="/Images/logo.png" alt="logo">
+                </div>
+                <div class="menu">
+                    <img class="icon_menu" src="/Images/icon-menu.svg" alt="logo">
+                    <img class="icon_close_menu disappear" src="/Images/icon-close-menu.svg" alt="logo">
+                </div>
+            </div>
+            <nav class="nav_2">
+                <div class="under_nav">
+                    <a href="/packages">Packages</a>
+                </div>
+                <div class="under_nav">
+                    <a href="/about">About</a>
+                </div>
+                <div class="under_nav">
+                    <a href="/faq">FAQ</a>
+                </div>
+                <div class="under_nav">
+                    <a href="/account">Account</a>
+                </div>
+                <div class="hold under_nav">
+                    <button class="btn logout logout_pack">
+                        Log Out
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="profile prof_acc user_acc" style="padding-bottom:60px">
+            <h1 class="prof_h">User Profile</h1>
+
+            <div class="person">
+                <img src="/Images/person-svgrepo-com.svg" alt="person">
+            </div>
+            <div class="name_acc"></div>
+            <div class="mail_acc"></div>
+            <div class="status">STATUS: <span style="color:limegreen">Active</span></div>
+
+            
+            <div class="usr_hist">
+                <h2 class="table_h">Investment History</h2>
+                <table class="table_acc">
+                    <tr>
+                        <th>Active Investment</th>
+                        <th>Withdrawable Balance</th>
+                    </tr>
+                    <tr>
+                        <td class="invested"></td>
+                        {{#if results}}                       
+                        <td class="drawable">{{results.balance}}</td>
+                        {{/if}}
+                    </tr>
+                </table>                
+            </div>
+            
+
+            <p style="color: crimson; font-size: 18px">Withdrawal requests are processed only after 24 hours of maturity!</p>
+
+            <button class="btn withdraw" style="background-color: darkcyan">
+                Withdraw
+            </button>
+        </div>
+
+        <div class="enter_fields hidden">
+            <p>Fill in your full names and your mobile number below:</p>
+            <div class="fields">
+                <input type="text" placeholder="Full Name" class="fullName">
+                <input type="text" placeholder="Mobile Number / Account Number" class="mobileNumber">
+                <input type="text" placeholder="Amount" class="amount_input">
+            </div>
+            <div class="nxt_hold">
+                <button class="btn nxt_msg">
+                    Next
+                </button>
+            </div>
+
+        </div>
+
+        <div class="msg hidden">
+            <p>Your investment plan that you enrolled has ended. You are eligible to receive profit.</p>
+            <p>Kindly Make payment of $50, withdrawal fee.</p>
+
+            <div>
+                <button class="btn pay_fee">
+                    Pay fee
+                </button>
+                <button class="btn exit">
+                    Exit
+                </button>
+            </div>
+        </div>    
+
+        <div class="processing hidden">
+            <p><b>Withdrawal request successful !!</b></p>
+            <p>An email confirmation of the same has been sent.</p>
+            <p>Withdrawal request ID:</p>
+            <p style="color: lightblue"><b>TYF67824575</b></p>
+
+            <div class="hold-ok">
+                <button class="btn okay">
+                    Ok
+                </button>
+            </div>
+        </div>
+        
+        <div class="pay_inst_b hidden">
+            <h1>Pay via M-Pesa, MTN, Voda, Halotel, Airtel, Tigo, BTC, USDT or Ethereum </h1>
+            <p>
+                1. Go to your preferred payment method.
+            </p>
+            <!--<p>
+                2. For M-pesa, Pay to any of the following mobile numbers:
+            </p>-->
+            <p>Company numbers to make payment:</p>
+            <p class="phone_nums">
+                <span><b>Vodacom:</b></span>
+                <span>+255748641027</span>
+            </p>
+            <p class="phone_nums">
+                <span><b>M-PESA:</b></span>
+                <span>+254798741595</span>
+            </p> 
+            <p class="phone_nums">
+                <span><b>Airtel Money:</b></span>
+                <span>+254104331392</span>
+            </p>
+            <p class="phone_nums">
+                <span><b>ETH, BTC & USDT:</b></span>
+                <span>Ask for receiving address from your agent.</span>
+            </p>
+
+            <p>
+                2. Enter the Payment confirmation message below
+            </p>
+            
+            <div class="sub_info">
+                <div>
+                    <input type="text" placeholder="Payment Message" class="pack_code_b">
+                </div>
+                <div>
+                    <button class="btn next_page nxt_pack">
+                        Submit
+                    </button>
+                </div>
+            </div>
+
+            <p style="color: crimson; opacity: .8">Make sure you enter a valid transaction message, otherwise your payment might not be processed !!</p>
+        </div>
+            
+    </main>
+
+    <footer>
+        <div class="foot_a">
+            <div class="logo logo_foot">
+                <img src="/Images/logo.png" alt="logo">
+            </div>
+            <div class="nav_foot">
+                <div>
+                    <a  href="/packages">Packages</a>
+                </div>
+                <div>
+                    <a href="/about">About</a>
+                </div>
+                <div>
+                    <a href="/faq">FAQ</a>
+                </div>
+                <div>
+                    <a href="/account">Account</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="foot_b">
+            <div class="media_a">
+                <a href="http://www.instagram.com/24hrfxtrading" target="blank">
+                    <img src="/Images/icon-instagram.svg" alt="ig">
+                </a>
+            </div>
+            <div class="media_b">
+                <a href="#">
+                    <img src="/Images/icon-facebook.svg" alt="fb">
+                </a>
+            </div>
+            <div class="media_c">
+                <a href="https://t.me/tg24HrFxTradingOrg" target="blank">
+                    <img src="/Images/telegram-logo-svgrepo-com.svg" alt="tel">
+                </a>
+            </div>
+            <div class="media_d">
+                <a href="https://bit.ly/3Mky8TS" target="blank">
+                    <img src="/Images/whatsapp-svgrepo-com.svg" alt="wa">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/intro.js"></script>
+
+    <script>
+        const name_acc = document.querySelector ('.name_acc');
+        const mail_acc = document.querySelector ('.mail_acc');
+
+        var storedName_pack = localStorage.getItem('name');
+        var storedMail_pack = localStorage.getItem('email');
+        const opt_chosen = localStorage.getItem ('opt_chosen');
+        const invested = document.querySelector ('.invested');
+
+        name_acc.innerHTML = storedName_pack;
+        mail_acc.innerHTML = storedMail_pack;
+        invested.innerHTML = opt_chosen;
+
+
+        const sel_inv = document.querySelector ('.sel_inv');
+        const p_ins = document.querySelector ('.p_ins')
+
+        const pay_inst = document.querySelector ('.pay_inst');
+        const logo_pack = document.querySelector('.logo_pack');
+        const log_pack = document.querySelector('.logout_pack');
+
+        //const nxt_a = document.querySelector ('.next_page_a');
+        /*const pca = document.querySelector ('.pack_code_a');
+
+        nxt_a.addEventListener ('click', ()=> {
+
+            if (pca.value == "") {
+                alert("Fill in the required field !")
+            }
+            else {
+                alert("Your Payment is being processed. Please wait for a response from 24HRFX TRADING ORG.");
+                window.location = "./packages.html";
+            }
+        })
+*/
+
+        const withdraw = document.querySelector ('.withdraw');
+        const nxt_msg = document.querySelector ('.nxt_msg');
+        const exit = document.querySelector ('.exit');
+        const pay_fee = document.querySelector ('.pay_fee');
+        const msg = document.querySelector ('.msg');
+        const main = document.querySelector ('main');
+        const head_pack = document.querySelector ('header');
+        const foot_pack = document.querySelector ('footer');
+        //const h_pack = document.querySelector ('.h_pack');
+       // const grid_pack = document.querySelector ('.grid');
+        //const inst_p = document.querySelector ('.pay_inst');
+        const inst_b = document.querySelector ('.pay_inst_b');
+        const drop_down = document.querySelector ('.dropdown');
+        const nxt_package = document.querySelector ('.nxt_pack');
+        const fields = document.querySelector ('.enter_fields');
+        const ins_p = document.querySelector ('.p_ins');
+        const pcb = document.querySelector ('.pack_code_b');
+        const prof = document.querySelector ('.profile');
+
+        withdraw.addEventListener ('click', ()=> {
+            fields.classList.remove('hidden');
+            head_pack.classList.add ('hidden');
+            foot_pack.classList.add ('hidden');
+            prof.classList.add ('hidden');
+           // h_pack.classList.add ('hidden');
+            //grid_pack.classList.add ('hidden');
+            //inst_p.classList.add ('hidden');
+            //ins_p.classList.add ('hidden');
+            //drop_down.classList.add ('hidden');
+            
+
+            nxt_msg.addEventListener ('click', ()=> {
+                const fname = document.querySelector ('.fullName');
+                const mnum = document.querySelector ('.mobileNumber');
+                const amount = document.querySelector ('.amount_input');
+
+                if (fname.value == "" || mnum.value == "" || amount.value == "") {
+                    alert ("Fill in the required fields !")
+                }
+                else {
+                    msg.classList.remove ('hidden');
+                    fields.classList.add('hidden');
+                }
+            })
+
+            main.style = "padding: 40px 12px";
+
+            exit.addEventListener ('click', ()=> {
+                window.location = "/account"
+            })
+
+           pay_fee.addEventListener ('click', ()=> {
+                inst_b.classList.remove ('hidden');
+                msg.classList.add ('hidden');
+
+                nxt_package.addEventListener ('click', ()=> {
+
+                    const processing = document.querySelector ('.processing');
+                    if (pcb.value == "") {
+                        alert("Fill in the required field !")
+                    }
+                    else {
+                        processing.classList.remove ('hidden');
+                        inst_b.classList.add('hidden');
+
+                        const okay = document.querySelector ('.okay');
+
+                        okay.addEventListener ('click', ()=> {
+                            window.location = '/account';
+                        })
+                    }
+                })
+            })
+        })
+
+        logo_pack.addEventListener ('click', ()=> {
+            window.location = "/page1";
+        })
+
+        log_pack.addEventListener ('click', ()=> {
+            window.location = "/";
+        })
+        
+    </script>
+</body>
+</html>
