@@ -86,11 +86,14 @@ router.get ('/balance', (req, res) => {
 })
 
 
-router.get ('/users',(req, res) => {
-    db.collection("users").find({}).toArray(function(err, results) {
-        if (err) throw err;
-        res.render ('users', {results})
-      });
-})
+router.get ('/users', async function (req, res) {
+        db.collection("users").find({}).toArray(function (err, results) {
+            if (err)
+                throw err;
+            res.render('users', { results });
+        });
+
+        //res.render ('users')
+    })
 
 module.exports = router;

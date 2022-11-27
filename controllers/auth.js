@@ -147,6 +147,7 @@ exports.login = async (req, res) => {
             if (err) throw err;
             res.render ('users', {results})
           });
+ 
     }
 
     const results = await user.findOne ({username}).lean();
@@ -165,12 +166,15 @@ exports.login = async (req, res) => {
     else if (results) {
        //const auth = await bcrypt.compare (password, user.password);
     
-        if (userid === results.userID) {
-            //return user;
+       if (userid !== results.userID) {
+        return res.render ('login', {
+            message: "Wrong user-Id !"
+        })
+    }
+        else if (userid === results.userID) {
             return res.render ('account', {results});
-            //console.log (results.userID);
         }
-        //throw Error ('Incorrect password or user-ID');
+        
     }
     
     else {
