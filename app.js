@@ -41,13 +41,11 @@ app.use ('/auth', require('./routes/auth'));
 
 
 app.listen ();
+
 /*
 const port = process.env.PORT || 8000;
 
 app.listen (port, ()=> {
-    console.log ('server started on port')
+    console.log ('server started on port 8000');
 })
 */
-
-
-

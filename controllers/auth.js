@@ -143,11 +143,12 @@ exports.login = async (req, res) => {
     const {username, userid, password} = req.body;
 
     if (userid == 'AD-605088' && password == 'admin@user' && username == 'Admin') {    
-        db.collection("users").find({}).toArray(function(err, results) {
+       /* db.collection("users").find({}).toArray(function(err, results) {
             if (err) throw err;
             res.render ('users', {results})
           });
- 
+        */
+          return res.render ('admin');
     }
 
     const results = await user.findOne ({username}).lean();
@@ -190,12 +191,23 @@ exports.editbalance = async (req, res) => {
 
     const {email, balance} = req.body;
 
+    if (!email || !balance) {
+        return res.render ('balance', {
+            message: "Fill in the required fields !"
+        })
+    }
     db.collection('users').updateOne (
         {email: email},
         {$set: {
             balance: balance
         }}
-    )
+    ).then (result => {
+        return res.render ('balance', {
+            message2: "Updated succesfully."
+        })
+    }).catch (err => {
+        console.log (err);
+    })
 }
 
 
